@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
-    public PotionData potionTypeRequested;
+    public PotionType potionRequested;
 
     public event Action OnRequestComplete;
     public event Action OnWrongPotionSubmitted;
@@ -12,12 +12,6 @@ public class Customer : MonoBehaviour
     // Time (in seconds) a customer will wait for their potion before leaving
     public float patience = 20.0f;
 
-    private void Start()
-    {
-        // Get a random potion type when the customer is created
-        potionTypeRequested = FindObjectOfType<PotionTableManager>().FetchRandomPotionType();
-    }
-
     private void Update()
     {
         patience -= Time.deltaTime;
@@ -25,13 +19,33 @@ public class Customer : MonoBehaviour
             OnPatienceDepleted?.Invoke();
     }
 
+    private void OnEnable()
+    {
+        OnRequestComplete += PlayOutAnimation;
+        OnPatienceDepleted += PlayOutAnimation;
+    }
+
+    private void OnDisable()
+    {
+        // Unsubscribe all event handlers
+        OnRequestComplete = null;
+        OnWrongPotionSubmitted = null;
+        OnPatienceDepleted = null;
+}
+
     // Submit a potion to a customer, checks if it is the right one
     // Invoke the OnRequestComplete event if it is the right one
     public void SubmitPotion(Potion potion)
     {
-        if (potion.potionData == potionTypeRequested)
+        if (potion.potionType == potionRequested)
             OnRequestComplete?.Invoke();
         else
             OnWrongPotionSubmitted?.Invoke();
+    }
+
+    private void PlayOutAnimation()
+    {
+        Animation animator = GetComponentInChildren<Animation>();
+        animator.Play("CustomerOut");
     }
 }

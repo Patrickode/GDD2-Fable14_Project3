@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Potion : MonoBehaviour
 {
-    public PotionData potionData;
+    public PotionType potionType;
 }

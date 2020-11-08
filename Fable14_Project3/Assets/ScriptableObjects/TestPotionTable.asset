@@ -12,3 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1103cf92e7db8744bf7e63037e4d5cb, type: 3}
   m_Name: TestPotionTable
   m_EditorClassIdentifier: 
+  possiblePotionTypes:
+  - potionType: {fileID: 11400000, guid: f4e6a65c8200e9d439987f2f01ff1ac9, type: 2}
+    weight: 1
+  - potionType: {fileID: 11400000, guid: 2da157fb4a1b3b34bb4210c80e1b71a2, type: 2}
+    weight: 1
