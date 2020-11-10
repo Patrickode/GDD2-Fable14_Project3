@@ -16,6 +16,18 @@ public enum IngredientType
 
 public enum IngredientAttribute
 {
-    Hot,
-    Cold
+    Warm,
+    Cool,
+    Intense,
+    Gentle,
+    Rough,
+    Energetic,
+    Relaxed,
+    Dark,
+    Bright,
+    Basic,
+    Pure,
+    Simple,
+    Complex,
+    Beautiful
 }
