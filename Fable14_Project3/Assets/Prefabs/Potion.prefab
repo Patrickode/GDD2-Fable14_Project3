@@ -45,6 +45,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potionType: {fileID: 0}
+  isStirring: 0
+  currentStirAmount: 0
+  neededStirAmount: 50
+  isCooking: 0
+  currentCookState: 0
+  cookTimer: 0
+  cookInterval: 2
 --- !u!212 &325571461608211034
 SpriteRenderer:
   m_ObjectHideFlags: 0
