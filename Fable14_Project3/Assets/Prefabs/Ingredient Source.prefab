@@ -182,7 +182,7 @@ MonoBehaviour:
   code: 0
   ingredient: {fileID: 0}
   spRend: {fileID: 2474973196851069454}
-  flickerTime: 0.075
+  flickerTime: 0.1
   flickerColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
 --- !u!114 &1194577581215048338
 MonoBehaviour:
