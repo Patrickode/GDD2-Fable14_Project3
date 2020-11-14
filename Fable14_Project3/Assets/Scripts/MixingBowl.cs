@@ -6,10 +6,15 @@ using UnityEngine;
 public class MixingBowl : MonoBehaviour
 {
     [SerializeField] private KeyCode submitCode = KeyCode.Return;
+    [SerializeField] private KeyCode stirCode = KeyCode.Space;
     [SerializeField] private KeyCode discardCode = KeyCode.Backspace;
 
     private HashSet<IngredientType> addedTypes;
     private Dictionary<IngredientAttribute, int> attributeAmounts;
+    // For Stirring
+    private bool isStirring;
+    private float stirAmount;
+    private float stirModifier;
 
     /// <summary>
     /// Invoked when mixing is complete. <br/>
@@ -30,6 +35,9 @@ public class MixingBowl : MonoBehaviour
     {
         addedTypes = new HashSet<IngredientType>();
         attributeAmounts = new Dictionary<IngredientAttribute, int>();
+        isStirring = false;
+        stirAmount = 0.0f;
+        stirModifier = 15.0f;
 
         IngredientSource.IngredientUsed += AddIngredientAttributes;
     }
@@ -50,6 +58,11 @@ public class MixingBowl : MonoBehaviour
                 ClearMixtureInfo();
             }
         }
+        else if(Input.GetKey(stirCode)
+            && stirAmount < 100.0f) 
+        {
+            Stir();
+		}
         else if (Input.GetKeyDown(discardCode))
         {
             ContentsDiscarded?.Invoke();
@@ -90,6 +103,29 @@ public class MixingBowl : MonoBehaviour
     {
         addedTypes.Clear();
         attributeAmounts.Clear();
+    }
+
+    /// <summary>
+    /// Stirs a potion, increasing its stir value
+    /// </summary>
+    private void Stir()
+    {
+        isStirring = true;
+
+        // Increase "stirring" progress until its 100%
+        if(stirAmount < 100.0f) {
+            stirAmount += Time.deltaTime * stirModifier;
+
+            int stirPercent = (int)stirAmount;
+            Debug.Log("Stir Amount: " + stirPercent + "%");
+        }
+
+		if(stirAmount >= 100.0f) {
+            Debug.Log("Done Stirring!");
+            isStirring = false;
+            // Create potion
+            return;
+        }
     }
 
 #if UNITY_EDITOR

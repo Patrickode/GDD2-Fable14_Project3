@@ -4,99 +4,60 @@ using UnityEngine;
 
 public enum CookState
 {
-    Raw, 
     Undercooked, 
-    Cooked,
-    Overcooked, 
-    Burnt
+    Perfect,
+    Overcooked
 }
 
 public class CookingManager : MonoBehaviour
 {
     Potion currentPotion;
     
-    // Start is called before the first frame update
     void Start()
     {
         // === this is all for TESTING (will be removed) ===
         currentPotion = new Potion();
-        currentPotion.isStirring = false;
-        currentPotion.currentStirAmount = 0.0f;
-        currentPotion.neededStirAmount = 50.0f;
         currentPotion.isCooking = false;
-        currentPotion.currentCookState = CookState.Raw;
+        currentPotion.currentCookState = CookState.Undercooked;
         currentPotion.cookTimer = 0.0f; 
-        currentPotion.cookInterval = 2.0f;
+        currentPotion.cookInterval = 3.0f;
     }
 
-    void FixedUpdate()
+	void Update()
     {
-        // Inputs to stir OR cook the potion
-        // SPACE    - Stir the potion
-        // B        - Toggle cooking the potion
-        if(Input.GetKey(KeyCode.Space)
-            && !currentPotion.isCooking) 
-            Stir(currentPotion);
-        else
-            currentPotion.isStirring = false;
-
-        if(Input.GetKeyDown(KeyCode.B)
-            && !currentPotion.isStirring) {
-            // Toggles whether the potion is cooking
-            currentPotion.isCooking = !currentPotion.isCooking;
-
-            if(currentPotion.isCooking)
-                Debug.Log("Potion is cooking!");
-            else
-                Debug.Log("Potion is no longer cooking!");
-
+        // Cooks the potion
+        // if Return (Enter) is pressed 
+        // if the potion is fully stirred
+        if(Input.GetKeyDown(KeyCode.Return)) {
+            currentPotion.isCooking = true;
+            Debug.Log("Potion is cooking! It is " + currentPotion.currentCookState);
         }
 
-        if(currentPotion.isCooking) {
+        // if the potion is cooking, it calls Cook()
+        if(currentPotion.isCooking
+            && currentPotion.currentCookState != CookState.Overcooked) {
             Cook(currentPotion);
-		}
+        }
     }
 
-    void Stir(Potion potion)
-	{
-        potion.isStirring = true;
-
-        // Increase "stirring" progress until its 100%
-        if(potion.currentStirAmount < potion.neededStirAmount)
-            potion.currentStirAmount += Time.deltaTime;
-
-        float stirPercent = currentPotion.currentStirAmount / currentPotion.neededStirAmount * 100;
-        Debug.Log("Test Stir Amount: " + stirPercent + "%");
-    }
-
+    /// <summary>
+    /// Cooks a potion, adding to a cook "timer"
+    /// </summary>
+    /// <param name="potion">The potion being cooked</param>
     void Cook(Potion potion)
 	{
-        potion.cookTimer += Time.deltaTime * 100;
+        potion.cookTimer += Time.deltaTime;
 
-        // If an interval is passed, UpCookState() is called
-        if(potion.cookTimer / potion.cookInterval >= (int)potion.currentCookState)
-            UpCookState(potion);
-
-        // If the potion's CookState == CookState.Burnt,
-        // the potion's isCooking becomes false
-        if(potion.currentCookState == CookState.Burnt) {
-            Debug.Log("The potion is burned!");
-            potion.isCooking = false;
-		}
+        // If an interval is passed, the CookState is "up'd"
+        if(potion.cookTimer / potion.cookInterval >= (int)potion.currentCookState + 1) {
+            // "Ups" the CookState of the potion depending on its current CookState
+            // Undercooked  -> Ready
+            // Ready        -> Overcooked
+            // Overcooked   -> Do nothing
+            if(potion.currentCookState != CookState.Overcooked)
+                potion.currentCookState += 1;
+                
+            Debug.Log("The potion is " + potion.currentCookState);
+        }
     }
-
-    void UpCookState(Potion potion)
-	{
-        // "Ups" the CookState of the potion depending on its current CookState
-        // Uncooked     -> Undercooked
-        // Undercooked  -> Cooked
-        // Cooked       -> Overcooked
-        // Overcooked   -> Burnt
-        // Burnt        -> Do nothing
-        if(potion.currentCookState == CookState.Burnt)
-            return;
-
-        potion.currentCookState += 1;
-        Debug.Log("The potion is " + potion.currentCookState);
-	}
 }

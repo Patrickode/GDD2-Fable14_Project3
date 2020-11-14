@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customerPrefab: {fileID: 5716412918244496673, guid: 4b81e32697fa6694ba9ec4a977e1754f,
     type: 3}
-  maxCustomerAmount: 5
+  maxCustomerAmount: 3
   startX: -8
   spaceBetweenCustomers: 2.5
   minTimeBetweenCustomers: 1
