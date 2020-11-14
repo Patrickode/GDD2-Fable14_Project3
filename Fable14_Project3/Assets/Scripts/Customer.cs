@@ -10,13 +10,16 @@ public class Customer : MonoBehaviour
     public event Action OnPatienceDepleted;
 
     // Time (in seconds) a customer will wait for their potion before leaving
-    public float patience = 20.0f;
-
-    private void Update()
+    private float patience = 20.0f;
+    public float Patience
     {
-        patience -= Time.deltaTime;
-        if (patience <= 0)
-            OnPatienceDepleted?.Invoke();
+        get => patience;
+        set
+        {
+            patience = value;
+            if (patience <= 0)
+                OnPatienceDepleted?.Invoke();
+        }
     }
 
     private void OnEnable()
