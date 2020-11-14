@@ -17,9 +17,6 @@ public class CookingManager : MonoBehaviour
     {
         // === this is all for TESTING (will be removed) ===
         currentPotion = new Potion();
-        currentPotion.isStirring = false;
-        currentPotion.currentStirAmount = 0.0f;
-        currentPotion.neededStirAmount = 50.0f;
         currentPotion.isCooking = false;
         currentPotion.currentCookState = CookState.Undercooked;
         currentPotion.cookTimer = 0.0f; 
@@ -28,20 +25,10 @@ public class CookingManager : MonoBehaviour
 
 	void Update()
     {
-        // Stirs the potion 
-        // if SPACE is pressed
-        // if it hasn't fully been stirred yet
-        if(Input.GetKey(KeyCode.Space)
-            && currentPotion.currentStirAmount < currentPotion.neededStirAmount)
-            Stir(currentPotion);
-        else
-            currentPotion.isStirring = false;
-
         // Cooks the potion
         // if Return (Enter) is pressed 
         // if the potion is fully stirred
-        if(Input.GetKeyDown(KeyCode.Return)
-            && currentPotion.currentStirAmount >= currentPotion.neededStirAmount) {
+        if(Input.GetKeyDown(KeyCode.Return)) {
             currentPotion.isCooking = true;
             Debug.Log("Potion is cooking! It is " + currentPotion.currentCookState);
         }
@@ -51,22 +38,6 @@ public class CookingManager : MonoBehaviour
             && currentPotion.currentCookState != CookState.Overcooked) {
             Cook(currentPotion);
         }
-    }
-
-    /// <summary>
-    /// Stirs a potion, up-ing its stir amount value
-    /// </summary>
-    /// <param name="potion">The potion being stirred</param>
-    void Stir(Potion potion)
-	{
-        potion.isStirring = true;
-
-        // Increase "stirring" progress until its 100%
-        if(potion.currentStirAmount < potion.neededStirAmount)
-            potion.currentStirAmount += Time.deltaTime * 10;
-
-        float stirPercent = (int)(currentPotion.currentStirAmount / currentPotion.neededStirAmount * 100);
-        Debug.Log("Stir Amount: " + stirPercent + "%");
     }
 
     /// <summary>
