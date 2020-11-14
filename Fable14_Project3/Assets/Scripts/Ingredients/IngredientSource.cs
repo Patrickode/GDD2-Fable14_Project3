@@ -14,6 +14,9 @@ public class IngredientSource : MonoBehaviour
     private Color initialColor;
     private Coroutine flickerCoroutine;
 
+    public KeyCode Code { get { return code; } }
+    public Ingredient Ingredient { get { return ingredient; } }
+
     /// <summary>
     /// Invoked when an ingredient source's keycode is pressed, i.e., that source's ingredient is used. <br/>
     /// <i>Parameter:</i> The ingredient that was used.
