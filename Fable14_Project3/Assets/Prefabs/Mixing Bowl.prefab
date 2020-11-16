@@ -95,4 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   submitCode: 13
+  stirCode: 32
   discardCode: 8
+  stirDuration: 5

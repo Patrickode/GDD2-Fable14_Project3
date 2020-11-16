@@ -18,7 +18,7 @@ public class PotionType : ScriptableObject
     }
 
     // To be used in the inspector to set the values of the dictionary
-    [SerializeField] private List<AttributeRequirement> attributeRequirements;
+    [SerializeField] private List<AttributeRequirement> attributeRequirements = null;
 
     // Exact attribute count for each attribute needed to make the potion
     public Dictionary<IngredientAttribute, int> requirements;

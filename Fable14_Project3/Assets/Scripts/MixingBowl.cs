@@ -12,9 +12,8 @@ public class MixingBowl : MonoBehaviour
     private HashSet<IngredientType> addedTypes;
     private Dictionary<IngredientAttribute, int> attributeAmounts;
     // For Stirring
-    private bool isStirring;
-    private float stirAmount;
-    private float stirModifier;
+    [SerializeField] private float stirDuration = 5.0f;
+    private float stirAmount = 0.0f;
 
     /// <summary>
     /// Invoked when mixing is complete. <br/>
@@ -35,9 +34,6 @@ public class MixingBowl : MonoBehaviour
     {
         addedTypes = new HashSet<IngredientType>();
         attributeAmounts = new Dictionary<IngredientAttribute, int>();
-        isStirring = false;
-        stirAmount = 0.0f;
-        stirModifier = 15.0f;
 
         IngredientSource.IngredientUsed += AddIngredientAttributes;
     }
@@ -50,7 +46,10 @@ public class MixingBowl : MonoBehaviour
     {
         if (Input.GetKeyDown(submitCode))
         {
-            if (addedTypes.Count < 8) { Debug.Log("Tried to submit mixture, not all types were added"); }
+            if (addedTypes.Count < 8 || stirAmount < 1)
+            {
+                Debug.Log("Tried to submit mixture, not all types were added / mixture not stirred");
+            }
             else
             {
                 ContentsSubmitted?.Invoke(attributeAmounts);
@@ -58,11 +57,15 @@ public class MixingBowl : MonoBehaviour
                 ClearMixtureInfo();
             }
         }
-        else if(Input.GetKey(stirCode)
-            && stirAmount < 100.0f) 
+        else if (Input.GetKey(stirCode))
         {
-            Stir();
-		}
+            //Stir the mixture if all ingredients have been added and the mixture is not fully stirred already
+            if (addedTypes.Count >= 8 && stirAmount < 1)
+            {
+                stirAmount += Time.deltaTime / stirDuration;
+                Debug.Log($"Stir Amount: {stirAmount:P1}");
+            }
+        }
         else if (Input.GetKeyDown(discardCode))
         {
             ContentsDiscarded?.Invoke();
@@ -103,29 +106,7 @@ public class MixingBowl : MonoBehaviour
     {
         addedTypes.Clear();
         attributeAmounts.Clear();
-    }
-
-    /// <summary>
-    /// Stirs a potion, increasing its stir value
-    /// </summary>
-    private void Stir()
-    {
-        isStirring = true;
-
-        // Increase "stirring" progress until its 100%
-        if(stirAmount < 100.0f) {
-            stirAmount += Time.deltaTime * stirModifier;
-
-            int stirPercent = (int)stirAmount;
-            Debug.Log("Stir Amount: " + stirPercent + "%");
-        }
-
-		if(stirAmount >= 100.0f) {
-            Debug.Log("Done Stirring!");
-            isStirring = false;
-            // Create potion
-            return;
-        }
+        stirAmount = 0;
     }
 
 #if UNITY_EDITOR
