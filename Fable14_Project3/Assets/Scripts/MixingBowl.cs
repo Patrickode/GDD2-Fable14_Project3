@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MixingBowl : MonoBehaviour
@@ -12,6 +13,8 @@ public class MixingBowl : MonoBehaviour
     private HashSet<IngredientType> addedTypes;
     private Dictionary<IngredientAttribute, int> attributeAmounts;
     // For Stirring
+    [Space(10)]
+    [SerializeField] private TextMeshPro progressLabel = null;
     [SerializeField] private float stirDuration = 5.0f;
     private float stirAmount = 0.0f;
 
@@ -44,6 +47,8 @@ public class MixingBowl : MonoBehaviour
 
     private void Update()
     {
+        if (progressLabel) { progressLabel.text = $"{stirAmount * 100:F0}% Stirred"; }
+
         if (Input.GetKeyDown(submitCode))
         {
             if (addedTypes.Count < 8 || stirAmount < 1)
@@ -60,11 +65,7 @@ public class MixingBowl : MonoBehaviour
         else if (Input.GetKey(stirCode))
         {
             //Stir the mixture if all ingredients have been added and the mixture is not fully stirred already
-            if (addedTypes.Count >= 8 && stirAmount < 1)
-            {
-                stirAmount += Time.deltaTime / stirDuration;
-                Debug.Log($"Stir Amount: {stirAmount:P1}");
-            }
+            if (addedTypes.Count >= 8 && stirAmount < 1) { stirAmount += Time.deltaTime / stirDuration; }
         }
         else if (Input.GetKeyDown(discardCode))
         {
