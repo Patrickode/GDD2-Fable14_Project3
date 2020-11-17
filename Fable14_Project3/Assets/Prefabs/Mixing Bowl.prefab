@@ -338,7 +338,9 @@ MonoBehaviour:
   stirCode: 32
   discardCode: 8
   progressLabel: {fileID: 1149739572109310053}
+  progressBarPivot: {fileID: 5125372857775118908}
   stirDuration: 5
+  percentPerSecond: 5
 --- !u!1 &7936085198956273556
 GameObject:
   m_ObjectHideFlags: 0
