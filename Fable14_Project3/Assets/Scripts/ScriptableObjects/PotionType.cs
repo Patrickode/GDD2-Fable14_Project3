@@ -17,13 +17,14 @@ public class PotionType : ScriptableObject
         }
     }
 
+    public string potionName;
+    public Color color;
+
     // To be used in the inspector to set the values of the dictionary
-    [SerializeField] private List<AttributeRequirement> attributeRequirements;
+    [SerializeField] private List<AttributeRequirement> attributeRequirements = null;
 
     // Exact attribute count for each attribute needed to make the potion
     public Dictionary<IngredientAttribute, int> requirements;
-
-    public Color color;
 
     private void OnEnable()
     {

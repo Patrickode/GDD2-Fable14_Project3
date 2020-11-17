@@ -9,12 +9,4 @@ public class PotionTableManager : MonoBehaviour
     {
         return potionTable.FetchRandomPotionType();
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Debug.Log(FetchRandomPotionType());
-        }
-    }
 }

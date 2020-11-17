@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 [CreateAssetMenu(fileName = "New PotionTable", menuName = "ScriptableObjects/PotionTable")]
 public class PotionTable : ScriptableObject
