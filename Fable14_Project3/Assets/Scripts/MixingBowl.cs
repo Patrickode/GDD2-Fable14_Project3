@@ -49,25 +49,29 @@ public class MixingBowl : MonoBehaviour
     {
         if (progressLabel) { progressLabel.text = $"{stirAmount * 100:F0}% Stirred"; }
 
-        if (Input.GetKeyDown(submitCode))
+        if (PotionCreationManager.creationState == CreationState.MixingIngredients)
         {
-            if (addedTypes.Count < 8 || stirAmount < 1)
+            if (Input.GetKeyDown(submitCode))
             {
-                Debug.Log("Tried to submit mixture, not all types were added / mixture not stirred");
+                if (addedTypes.Count < 8 || stirAmount < 1)
+                {
+                    Debug.Log("Tried to submit mixture, not all types were added / mixture not stirred");
+                }
+                else
+                {
+                    ContentsSubmitted?.Invoke(attributeAmounts);
+                    Debug.Log($"Submitted mixture. (Attributes below)\n{GetMixtureAttributesAsString()}");
+                    ClearMixtureInfo();
+                }
             }
-            else
+            else if (Input.GetKey(stirCode))
             {
-                ContentsSubmitted?.Invoke(attributeAmounts);
-                Debug.Log($"Submitted mixture. (Attributes below)\n{GetMixtureAttributesAsString()}");
-                ClearMixtureInfo();
+                //Stir the mixture if all ingredients have been added and the mixture is not fully stirred already
+                if (addedTypes.Count >= 8 && stirAmount < 1) { stirAmount += Time.deltaTime / stirDuration; }
             }
         }
-        else if (Input.GetKey(stirCode))
-        {
-            //Stir the mixture if all ingredients have been added and the mixture is not fully stirred already
-            if (addedTypes.Count >= 8 && stirAmount < 1) { stirAmount += Time.deltaTime / stirDuration; }
-        }
-        else if (Input.GetKeyDown(discardCode))
+        
+        if (Input.GetKeyDown(discardCode))
         {
             ContentsDiscarded?.Invoke();
             ClearMixtureInfo();
