@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CustomerManager : MonoBehaviour
 {
     [SerializeField] private Customer customerPrefab = null;
+    [SerializeField] private List<Sprite> customerSprites = null;
 
     [SerializeField] private int maxCustomerAmount = 4;
 
@@ -18,6 +20,7 @@ public class CustomerManager : MonoBehaviour
 
     private Queue<Customer> customers;
     public Customer CurrentCustomer => customers.Count > 0 ? customers.Peek() : null;
+    private CustomerContainer customerContainer;
 
     private PotionTableManager potionTableManager;
 
@@ -31,6 +34,7 @@ public class CustomerManager : MonoBehaviour
     private void Awake()
     {
         customers = new Queue<Customer>();
+        customerContainer = FindObjectOfType<CustomerContainer>();
         potionTableManager = FindObjectOfType<PotionTableManager>();
     }
 
@@ -59,19 +63,19 @@ public class CustomerManager : MonoBehaviour
             CurrentCustomer.Patience -= Time.deltaTime;
     }
 
-    public void StartEnqueingCustomers()
+    private void StartEnqueingCustomers()
     {
         if (customerEnqueingCoroutine != null)
             StopCoroutine(customerEnqueingCoroutine);
         customerEnqueingCoroutine = StartCoroutine(HandleCustomerEnqueing());
     }
 
-    public void StopEnqueingCustomers()
+    private void StopEnqueingCustomers()
     {
         StopCoroutine(customerEnqueingCoroutine);
     }
 
-    public void DequeueCustomer()
+    private void DequeueCustomer()
     {
         if (customers.Count >= maxCustomerAmount)
             OnMaxCustomersLeft?.Invoke();
@@ -94,9 +98,25 @@ public class CustomerManager : MonoBehaviour
     private void EnqueueCustomer()
     {
         Customer newCustomer = Instantiate(customerPrefab);
+        // Parent them to the Customer Container
+        newCustomer.transform.parent = customerContainer.transform;
         newCustomer.OnPatienceDepleted += () => DequeueCustomer();
+        newCustomer.OnRequestComplete += DequeueCustomer;
         // Set a random potion type when the customer is created
         newCustomer.potionRequested = potionTableManager.FetchRandomPotionType();
+        // Set a random sprite
+        Sprite newCustomerSprite = null;
+        if (customerSprites.Count > 0)
+        {
+            do
+            {
+                // Keep setting the customer sprite until one is found that is not in the queue (avoid repeats)
+                newCustomerSprite = customerSprites[UnityEngine.Random.Range(0, customerSprites.Count)];
+            } while (customers.Any(c => c.SpriteRenderer.sprite == newCustomerSprite));
+        }
+        if (newCustomerSprite)
+            newCustomer.SpriteRenderer.sprite = newCustomerSprite;
+
         customers.Enqueue(newCustomer);
         if (customers.Count >= maxCustomerAmount)
             OnMaxCustomersReached?.Invoke();
@@ -113,5 +133,10 @@ public class CustomerManager : MonoBehaviour
             c.transform.position = new Vector3(i * spaceBetweenCustomers, 0);
             i--;
         }
+    }
+
+    public void SubmitPotion(Potion potion)
+    {
+        CurrentCustomer.SubmitPotion(potion);
     }
 }
