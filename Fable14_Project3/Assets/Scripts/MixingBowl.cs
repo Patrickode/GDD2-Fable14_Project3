@@ -20,6 +20,7 @@ public class MixingBowl : MonoBehaviour
     [Tooltip("The percentage the progress bar moves every second. 1 = 100%.")]
     [SerializeField] private float percentPerSecond = 5f;
     private float stirAmount = 0.0f;
+    private float lastStirAmount = -1.0f;
     private Vector3 progressBarTarget;
 
     /// <summary>
@@ -91,12 +92,15 @@ public class MixingBowl : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(discardCode))
+        if (addedTypes.Count > 0 && Input.GetKeyDown(discardCode))
         {
             ContentsDiscarded?.Invoke();
             ClearMixtureInfo();
             Debug.Log("Discarded mixture.");
         }
+
+        if (stirAmount >= 1 && lastStirAmount < 1) { InvokePoofAction(); }
+        lastStirAmount = stirAmount;
     }
 
     private void AddIngredientAttributes(Ingredient newIngredient)
@@ -132,7 +136,11 @@ public class MixingBowl : MonoBehaviour
         addedTypes.Clear();
         attributeAmounts.Clear();
         stirAmount = 0;
+
+        InvokePoofAction();
     }
+
+    private void InvokePoofAction() { ParticleManager.SummonPoof?.Invoke(transform.position, Vector3.one * 2); }
 
 #if UNITY_EDITOR
     private string GetMixtureAttributesAsString()
