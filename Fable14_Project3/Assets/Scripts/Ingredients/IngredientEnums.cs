@@ -20,7 +20,7 @@ public enum IngredientAttribute
     Cool,
     Intense,
     Gentle,
-    Rough,
+    Sharp,
     Energetic,
     Relaxed,
     Dark,

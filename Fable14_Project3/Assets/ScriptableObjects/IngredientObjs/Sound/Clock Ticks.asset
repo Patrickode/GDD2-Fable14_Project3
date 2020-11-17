@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8673352b340c3e1408556d94275cb0ca, type: 3}
-  m_Name: Taste 2
+  m_Name: Clock Ticks
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  senseType: 4
-  attributes: 
+  senseType: 2
+  attributes: 090000000b00000006000000
