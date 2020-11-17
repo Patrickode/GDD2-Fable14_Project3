@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class Order : MonoBehaviour
@@ -17,19 +18,22 @@ public class Order : MonoBehaviour
         set
         {
             customer = value;
-            potionLiquidRenderer.color = customer.potionRequested.color;
+            potionLiquidRenderer.color = Customer.potionRequested.color;
             maxPatience = Customer.Patience;
+            potionName.text = Customer.potionRequested.potionName;
         }
     }
 
     public event Action<Order> OnDelete;
 
     private SpriteRenderer potionLiquidRenderer;
+    private TextMeshPro potionName;
     private PatienceBar patienceBar;
 
     private void Awake()
     {
         potionLiquidRenderer = FindObjectsOfType<SpriteRenderer>().First(renderer => renderer.name == "Liquid");
+        potionName = GetComponentInChildren<TextMeshPro>();
         patienceBar = GetComponentInChildren<PatienceBar>();
     }
 

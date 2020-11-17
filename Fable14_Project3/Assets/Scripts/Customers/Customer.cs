@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
+    private Animation animator;
+
     public PotionType potionRequested;
+
+    public SpriteRenderer SpriteRenderer { get; private set; }
 
     public event Action OnRequestComplete;
     public event Action OnWrongPotionSubmitted;
@@ -20,6 +24,12 @@ public class Customer : MonoBehaviour
             if (patience <= 0)
                 OnPatienceDepleted?.Invoke();
         }
+    }
+
+    private void Awake()
+    {
+        SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponentInChildren<Animation>();
     }
 
     private void OnEnable()
@@ -40,7 +50,7 @@ public class Customer : MonoBehaviour
     // Invoke the OnRequestComplete event if it is the right one
     public void SubmitPotion(Potion potion)
     {
-        if (potion.potionType == potionRequested)
+        if (potion.PotionType == potionRequested)
             OnRequestComplete?.Invoke();
         else
             OnWrongPotionSubmitted?.Invoke();
@@ -48,7 +58,6 @@ public class Customer : MonoBehaviour
 
     private void PlayOutAnimation()
     {
-        Animation animator = GetComponentInChildren<Animation>();
         animator.Play("CustomerOut");
     }
 }

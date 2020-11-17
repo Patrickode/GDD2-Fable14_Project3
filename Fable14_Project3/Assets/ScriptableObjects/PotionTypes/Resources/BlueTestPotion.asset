@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6429ecc199e549943a8c14863279e239, type: 3}
   m_Name: BlueTestPotion
   m_EditorClassIdentifier: 
-  attributeRequirements: []
+  potionName: Blue Potion
   color: {r: 0, g: 0.06795311, b: 1, a: 1}
+  attributeRequirements: []

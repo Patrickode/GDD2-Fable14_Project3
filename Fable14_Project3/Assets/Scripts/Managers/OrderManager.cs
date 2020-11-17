@@ -10,11 +10,13 @@ public class OrderManager : MonoBehaviour
     private CustomerManager customerManager;
 
     private List<Order> orders;
+    private OrderContainer orderContainer;
 
     private void Awake()
     {
         customerManager = FindObjectOfType<CustomerManager>();
         orders = new List<Order>();
+        orderContainer = FindObjectOfType<OrderContainer>();
     }
 
     private void OnEnable()
@@ -32,6 +34,7 @@ public class OrderManager : MonoBehaviour
     private void CreateOrderFor(Customer customer)
     {
         Order order = Instantiate(orderPrefab, customer.transform.position, Quaternion.identity);
+        order.transform.parent = orderContainer.transform;
         order.transform.position = new Vector3(order.transform.position.x, 4);
         order.Customer = customer;
         order.OnDelete += DeleteOrder;
