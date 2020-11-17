@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MixingBowl : MonoBehaviour
 {
     [SerializeField] private KeyCode submitCode = KeyCode.Return;
+    [SerializeField] private KeyCode stirCode = KeyCode.Space;
     [SerializeField] private KeyCode discardCode = KeyCode.Backspace;
 
     private HashSet<IngredientType> addedTypes;
     private Dictionary<IngredientAttribute, int> attributeAmounts;
+    // For Stirring
+    [Space(10)]
+    [SerializeField] private TextMeshPro progressLabel = null;
+    [SerializeField] private float stirDuration = 5.0f;
+    private float stirAmount = 0.0f;
 
     /// <summary>
     /// Invoked when mixing is complete. <br/>
@@ -40,15 +47,25 @@ public class MixingBowl : MonoBehaviour
 
     private void Update()
     {
+        if (progressLabel) { progressLabel.text = $"{stirAmount * 100:F0}% Stirred"; }
+
         if (Input.GetKeyDown(submitCode))
         {
-            if (addedTypes.Count < 8) { Debug.Log("Tried to submit mixture, not all types were added"); }
+            if (addedTypes.Count < 8 || stirAmount < 1)
+            {
+                Debug.Log("Tried to submit mixture, not all types were added / mixture not stirred");
+            }
             else
             {
                 ContentsSubmitted?.Invoke(attributeAmounts);
                 Debug.Log($"Submitted mixture. (Attributes below)\n{GetMixtureAttributesAsString()}");
                 ClearMixtureInfo();
             }
+        }
+        else if (Input.GetKey(stirCode))
+        {
+            //Stir the mixture if all ingredients have been added and the mixture is not fully stirred already
+            if (addedTypes.Count >= 8 && stirAmount < 1) { stirAmount += Time.deltaTime / stirDuration; }
         }
         else if (Input.GetKeyDown(discardCode))
         {
@@ -90,6 +107,7 @@ public class MixingBowl : MonoBehaviour
     {
         addedTypes.Clear();
         attributeAmounts.Clear();
+        stirAmount = 0;
     }
 
 #if UNITY_EDITOR
