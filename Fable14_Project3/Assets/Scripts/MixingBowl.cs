@@ -24,6 +24,11 @@ public class MixingBowl : MonoBehaviour
     private Vector3 progressBarTarget;
 
     /// <summary>
+    /// Invoked when an ingredient is added to the bowl.<br/>
+    /// <i>Parameter:</i> The ingredient that was added.
+    /// </summary>
+    public static Action<Ingredient> IngredientAddedToBowl;
+    /// <summary>
     /// Invoked when mixing is complete. <br/>
     /// <i>Parameter:</i> The attributes of this mixture, and the amount of each.
     /// </summary>
@@ -99,7 +104,11 @@ public class MixingBowl : MonoBehaviour
             Debug.Log("Discarded mixture.");
         }
 
-        if (stirAmount >= 1 && lastStirAmount < 1) { InvokePoofAction(); }
+        if (stirAmount >= 1 && lastStirAmount < 1)
+        {
+            InvokePoofAction();
+            MixingComplete?.Invoke(attributeAmounts);
+        }
         lastStirAmount = stirAmount;
     }
 
@@ -127,6 +136,8 @@ public class MixingBowl : MonoBehaviour
             }
         }
 
+        IngredientAddedToBowl?.Invoke(newIngredient);
+
         Debug.Log($"Added ingredient: {newIngredient} (Attributes below)\n" +
             $"{GetIngredientAttributesAsString(newIngredient)}");
     }
@@ -140,7 +151,7 @@ public class MixingBowl : MonoBehaviour
         InvokePoofAction();
     }
 
-    private void InvokePoofAction() { ParticleManager.SummonPoof?.Invoke(transform.position, Vector3.one * 2); }
+    private void InvokePoofAction() { ParticleManager.SummonPoof?.Invoke(transform.position, Vector3.one * 2.5f); }
 
 #if UNITY_EDITOR
     private string GetMixtureAttributesAsString()
