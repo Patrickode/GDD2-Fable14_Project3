@@ -140,7 +140,7 @@ public class MixingBowl : MonoBehaviour
         InvokePoofAction();
     }
 
-    private void InvokePoofAction() { ParticleManager.SummonPoof?.Invoke(transform.position, Vector3.one * 2); }
+    private void InvokePoofAction() { ParticleManager.SummonPoof?.Invoke(transform.position, Vector3.one * 2.5f); }
 
 #if UNITY_EDITOR
     private string GetMixtureAttributesAsString()
