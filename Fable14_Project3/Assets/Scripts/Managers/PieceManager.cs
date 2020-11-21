@@ -3,17 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public struct IngredientImagePair
-{
-    public Ingredient ingredient;
-    public Sprite image;
-}
-
 public class PieceManager : MonoBehaviour
 {
-    [Tooltip("The list that holds what images correspond to what ingredients.")]
-    [SerializeField] private IngredientImagePair[] ingredientImageList = null;
+    [Tooltip("This array is used for determining which images correspond to which images.")]
+    [SerializeField] private IngredientSource[] ingredientSources = null;
     [Space(15)]
     [SerializeField] private SpriteRenderer piecePrefab = null;
     [SerializeField] private float pieceSpawnHeight = 2.5f;
@@ -25,9 +18,9 @@ public class PieceManager : MonoBehaviour
     private void Start()
     {
         ingredientDict = new Dictionary<Ingredient, Sprite>();
-        foreach (var pair in ingredientImageList)
+        foreach (IngredientSource source in ingredientSources)
         {
-            ingredientDict.Add(pair.ingredient, pair.image);
+            ingredientDict.Add(source.Ingredient, source.PieceImage);
         }
 
         spawnedPieces = new List<SpriteRenderer>();

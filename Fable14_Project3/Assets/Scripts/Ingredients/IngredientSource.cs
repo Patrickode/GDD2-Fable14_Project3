@@ -7,6 +7,8 @@ public class IngredientSource : MonoBehaviour
 {
     [SerializeField] private KeyCode code = KeyCode.None;
     [SerializeField] private Ingredient ingredient = null;
+    [Tooltip("The image for this ingredient when it's put in the mixing bowl.")]
+    [SerializeField] private Sprite pieceImage = null;
     [Space(15)]
     [SerializeField] private SpriteRenderer spRend = null;
     [SerializeField] private float flickerTime = 0;
@@ -16,6 +18,7 @@ public class IngredientSource : MonoBehaviour
 
     public KeyCode Code { get { return code; } }
     public Ingredient Ingredient { get { return ingredient; } }
+    public Sprite PieceImage { get { return pieceImage; } }
 
     /// <summary>
     /// Invoked when an ingredient source's keycode is pressed, i.e., that source's ingredient is used. <br/>
