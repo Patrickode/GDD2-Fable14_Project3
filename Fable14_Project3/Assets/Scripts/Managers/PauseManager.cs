@@ -36,6 +36,14 @@ public class PauseManager : MonoBehaviour
         TogglePause -= OnTogglePaused;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause?.Invoke();
+        }
+    }
+
     private void OnTogglePaused()
     {
         //soundEffectsManager.PlaySound(togglePauseSound);
