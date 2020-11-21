@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum CookState
@@ -57,12 +58,20 @@ public class CookingManager : MonoBehaviour
     {
         OnPerfect += SetPerfect;
         OnOvercooked += SetOvercooked;
+        MixingBowl.ContentsSubmitted += AssignPotionType;
     }
 
     private void OnDisable()
     {
         OnPerfect -= SetPerfect;
         OnOvercooked -= SetOvercooked;
+        MixingBowl.ContentsSubmitted -= AssignPotionType;
+    }
+
+    private void AssignPotionType(Dictionary<IngredientAttribute, int> attributeAmounts)
+    {
+        ConversionManager.TryGetPotionType(attributeAmounts, out PotionType pType);
+        currentPotion.PotionType = pType;
     }
 
     void Update()
