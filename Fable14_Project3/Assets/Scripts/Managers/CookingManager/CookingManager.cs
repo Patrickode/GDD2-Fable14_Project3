@@ -70,6 +70,7 @@ public class CookingManager : MonoBehaviour
 
     private void AssignPotionType(Dictionary<IngredientAttribute, int> attributeAmounts)
     {
+        ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
         ConversionManager.TryGetPotionType(attributeAmounts, out PotionType pType);
         currentPotion.PotionType = pType;
     }
@@ -125,6 +126,7 @@ public class CookingManager : MonoBehaviour
                     // Submit potion to current customer
                     if (Input.GetKeyDown(submitCode))
                     {
+                        ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
                         customerManager.SubmitPotion(currentPotion);
                         Reset();
                     }

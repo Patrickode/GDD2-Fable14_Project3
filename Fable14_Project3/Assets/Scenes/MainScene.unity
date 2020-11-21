@@ -522,6 +522,7 @@ MonoBehaviour:
   possiblePotionTypes:
   - {fileID: 11400000, guid: f4e6a65c8200e9d439987f2f01ff1ac9, type: 2}
   - {fileID: 11400000, guid: 2da157fb4a1b3b34bb4210c80e1b71a2, type: 2}
+  fallbackPotionType: {fileID: 11400000, guid: c6811e3337a2653448e70c403e168f5a, type: 2}
 --- !u!4 &312287750
 Transform:
   m_ObjectHideFlags: 0
@@ -2023,6 +2024,9 @@ MonoBehaviour:
     type: 3}
   pieceSpawnHeight: 2.5
   pieceSpawnXRange: 1.25
+  mixCode: 32
+  jostleIntensity: 40
+  jostleInterval: 0.25
 --- !u!4 &2044859821
 Transform:
   m_ObjectHideFlags: 0
@@ -2088,6 +2092,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2022339838}
     m_Modifications:
+    - target: {fileID: 919778273728991542, guid: 8ed2427760864724ea3048bfa5ee1d05,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5812693340666436289, guid: 8ed2427760864724ea3048bfa5ee1d05,
         type: 3}
       propertyPath: m_Name

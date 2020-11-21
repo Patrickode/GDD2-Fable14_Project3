@@ -11,9 +11,15 @@ public class PieceManager : MonoBehaviour
     [SerializeField] private SpriteRenderer piecePrefab = null;
     [SerializeField] private float pieceSpawnHeight = 2.5f;
     [SerializeField] private float pieceSpawnXRange = 1.25f;
+    [Space(10)]
+    [SerializeField] private KeyCode mixCode = KeyCode.Space;
+    [SerializeField] private float jostleIntensity = 1;
+    [SerializeField] private float jostleInterval = 0.25f;
 
     private Dictionary<Ingredient, Sprite> ingredientDict = null;
     private List<SpriteRenderer> spawnedPieces = null;
+    private List<Rigidbody2D> pieceRBs = null;
+    private Coroutine jostleCoroutine = null;
 
     private void Start()
     {
@@ -24,6 +30,7 @@ public class PieceManager : MonoBehaviour
         }
 
         spawnedPieces = new List<SpriteRenderer>();
+        pieceRBs = new List<Rigidbody2D>();
 
         MixingBowl.IngredientAddedToBowl += SpawnIngredientPiece;
         MixingBowl.MixingComplete += ClearSpawnedPieces;
@@ -36,6 +43,30 @@ public class PieceManager : MonoBehaviour
         MixingBowl.MixingComplete -= ClearSpawnedPieces;
         MixingBowl.ContentsSubmitted -= ClearSpawnedPieces;
         MixingBowl.ContentsDiscarded -= ClearSpawnedPieces;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(mixCode))
+        {
+            jostleCoroutine = StartCoroutine(JostlePieces());
+        }
+        else if (Input.GetKeyUp(mixCode))
+        {
+            if (jostleCoroutine != null) { StopCoroutine(jostleCoroutine); }
+        }
+    }
+
+    private IEnumerator JostlePieces()
+    {
+        while (true)
+        {
+            foreach (Rigidbody2D piece in pieceRBs)
+            {
+                piece.AddForce(Vector2.up * jostleIntensity);
+            }
+            yield return new WaitForSeconds(jostleInterval);
+        }
     }
 
     private void SpawnIngredientPiece(Ingredient ingToSpawn)
@@ -87,15 +118,17 @@ public class PieceManager : MonoBehaviour
         }
 
         spawnedPieces.Add(spawnedIng);
+        pieceRBs.Add(spawnedIng.GetComponent<Rigidbody2D>());
     }
 
     private void ClearSpawnedPieces(Dictionary<IngredientAttribute, int> _) { ClearSpawnedPieces(); }
     private void ClearSpawnedPieces()
     {
-        foreach (var piece in spawnedPieces)
+        foreach (SpriteRenderer piece in spawnedPieces)
         {
             Destroy(piece.gameObject);
         }
         spawnedPieces.Clear();
+        pieceRBs.Clear();
     }
 }

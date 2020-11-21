@@ -32,7 +32,10 @@ public class PotionType : ScriptableObject
     {
         requirements = new Dictionary<IngredientAttribute, int>();
         // Populate dictionary with values from the inspector
-        foreach (AttributeRequirement requirement in attributeRequirements)
-            requirements.Add(requirement.attribute, requirement.amount);
+        if (attributeRequirements != null)
+        {
+            foreach (AttributeRequirement requirement in attributeRequirements)
+                requirements.Add(requirement.attribute, requirement.amount);
+        }
     }
 }

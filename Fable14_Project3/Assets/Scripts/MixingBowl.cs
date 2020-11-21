@@ -81,12 +81,12 @@ public class MixingBowl : MonoBehaviour
             {
                 if (addedTypes.Count < 8 || stirAmount < 1)
                 {
-                    Debug.Log("Tried to submit mixture, not all types were added / mixture not stirred");
+                    //Debug.Log("Tried to submit mixture, not all types were added / mixture not stirred");
                 }
                 else
                 {
                     ContentsSubmitted?.Invoke(attributeAmounts);
-                    Debug.Log($"Submitted mixture. (Attributes below)\n{GetMixtureAttributesAsString()}");
+                    //Debug.Log($"Submitted mixture. (Attributes below)\n{GetMixtureAttributesAsString()}");
                     ClearMixtureInfo();
                 }
             }
@@ -101,7 +101,7 @@ public class MixingBowl : MonoBehaviour
         {
             ContentsDiscarded?.Invoke();
             ClearMixtureInfo();
-            Debug.Log("Discarded mixture.");
+            //Debug.Log("Discarded mixture.");
         }
 
         if (stirAmount >= 1 && lastStirAmount < 1)
@@ -138,8 +138,8 @@ public class MixingBowl : MonoBehaviour
 
         IngredientAddedToBowl?.Invoke(newIngredient);
 
-        Debug.Log($"Added ingredient: {newIngredient} (Attributes below)\n" +
-            $"{GetIngredientAttributesAsString(newIngredient)}");
+        //Debug.Log($"Added ingredient: {newIngredient} (Attributes below)\n" +
+        //    $"{GetIngredientAttributesAsString(newIngredient)}");
     }
 
     private void ClearMixtureInfo()
