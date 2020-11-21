@@ -15,9 +15,19 @@ public class MixingBowl : MonoBehaviour
     // For Stirring
     [Space(10)]
     [SerializeField] private TextMeshPro progressLabel = null;
+    [SerializeField] private Transform progressBarPivot = null;
     [SerializeField] private float stirDuration = 5.0f;
+    [Tooltip("The percentage the progress bar moves every second. 1 = 100%.")]
+    [SerializeField] private float percentPerSecond = 5f;
     private float stirAmount = 0.0f;
+    private float lastStirAmount = -1.0f;
+    private Vector3 progressBarTarget;
 
+    /// <summary>
+    /// Invoked when an ingredient is added to the bowl.<br/>
+    /// <i>Parameter:</i> The ingredient that was added.
+    /// </summary>
+    public static Action<Ingredient> IngredientAddedToBowl;
     /// <summary>
     /// Invoked when mixing is complete. <br/>
     /// <i>Parameter:</i> The attributes of this mixture, and the amount of each.
@@ -35,6 +45,13 @@ public class MixingBowl : MonoBehaviour
 
     private void Start()
     {
+        progressBarPivot.localScale = new Vector3(
+            0,
+            progressBarPivot.localScale.y,
+            progressBarPivot.localScale.z
+        );
+        progressBarTarget = progressBarPivot.localScale;
+
         addedTypes = new HashSet<IngredientType>();
         attributeAmounts = new Dictionary<IngredientAttribute, int>();
 
@@ -48,6 +65,15 @@ public class MixingBowl : MonoBehaviour
     private void Update()
     {
         if (progressLabel) { progressLabel.text = $"{stirAmount * 100:F0}% Stirred"; }
+        if (progressBarPivot)
+        {
+            progressBarTarget.x = stirAmount;
+            progressBarPivot.localScale = Vector3.MoveTowards
+                (progressBarPivot.localScale,
+                progressBarTarget,
+                percentPerSecond * Time.deltaTime
+            );
+        }
 
         if (PotionCreationManager.creationState == CreationState.MixingIngredients)
         {
@@ -70,13 +96,20 @@ public class MixingBowl : MonoBehaviour
                 if (addedTypes.Count >= 8 && stirAmount < 1) { stirAmount += Time.deltaTime / stirDuration; }
             }
         }
-        
-        if (Input.GetKeyDown(discardCode))
+
+        if (addedTypes.Count > 0 && Input.GetKeyDown(discardCode))
         {
             ContentsDiscarded?.Invoke();
             ClearMixtureInfo();
             Debug.Log("Discarded mixture.");
         }
+
+        if (stirAmount >= 1 && lastStirAmount < 1)
+        {
+            InvokePoofAction();
+            MixingComplete?.Invoke(attributeAmounts);
+        }
+        lastStirAmount = stirAmount;
     }
 
     private void AddIngredientAttributes(Ingredient newIngredient)
@@ -103,6 +136,8 @@ public class MixingBowl : MonoBehaviour
             }
         }
 
+        IngredientAddedToBowl?.Invoke(newIngredient);
+
         Debug.Log($"Added ingredient: {newIngredient} (Attributes below)\n" +
             $"{GetIngredientAttributesAsString(newIngredient)}");
     }
@@ -112,7 +147,11 @@ public class MixingBowl : MonoBehaviour
         addedTypes.Clear();
         attributeAmounts.Clear();
         stirAmount = 0;
+
+        InvokePoofAction();
     }
+
+    private void InvokePoofAction() { ParticleManager.SummonPoof?.Invoke(transform.position, Vector3.one * 2.5f); }
 
 #if UNITY_EDITOR
     private string GetMixtureAttributesAsString()

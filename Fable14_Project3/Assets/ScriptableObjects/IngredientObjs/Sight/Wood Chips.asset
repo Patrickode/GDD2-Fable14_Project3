@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8673352b340c3e1408556d94275cb0ca, type: 3}
-  m_Name: Smell 3
+  m_Name: Wood Chips
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  senseType: 3
-  attributes: 
+  senseType: 1
+  attributes: 090000000400000000000000

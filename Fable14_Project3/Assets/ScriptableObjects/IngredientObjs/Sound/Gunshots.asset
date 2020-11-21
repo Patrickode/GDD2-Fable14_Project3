@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8673352b340c3e1408556d94275cb0ca, type: 3}
-  m_Name: Liquid Base 3
+  m_Name: Gunshots
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
-  senseType: 0
-  attributes: 
+  senseType: 2
+  attributes: 05000000070000000400000002000000
