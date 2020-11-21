@@ -2023,6 +2023,9 @@ MonoBehaviour:
     type: 3}
   pieceSpawnHeight: 2.5
   pieceSpawnXRange: 1.25
+  mixCode: 32
+  jostleIntensity: 40
+  jostleInterval: 0.25
 --- !u!4 &2044859821
 Transform:
   m_ObjectHideFlags: 0
