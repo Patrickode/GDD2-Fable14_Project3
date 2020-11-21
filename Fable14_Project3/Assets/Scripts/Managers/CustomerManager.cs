@@ -129,7 +129,11 @@ public class CustomerManager : MonoBehaviour
         int i = 0;
         foreach (Customer c in customers)
         {
-            c.transform.position = new Vector3(i * spaceBetweenCustomers, 0);
+            if (c)
+            {
+                c.transform.position = new Vector3(i * spaceBetweenCustomers, 0);
+            }
+            
             i--;
         }
     }
