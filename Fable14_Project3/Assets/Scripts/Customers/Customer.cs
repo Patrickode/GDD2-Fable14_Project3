@@ -3,15 +3,19 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
+    private ScoreManager scoreManager;
+
     private Animation animator;
 
     public PotionType potionRequested;
 
     public SpriteRenderer SpriteRenderer { get; private set; }
 
-    public event Action OnRequestComplete;
+    public event Action<Potion> OnRequestComplete;
     public event Action OnWrongPotionSubmitted;
     public event Action OnPatienceDepleted;
+
+    public event Action OnDestroyed;
 
     // Time (in seconds) a customer will wait for their potion before leaving
     private float patience = 20.0f;
@@ -28,13 +32,16 @@ public class Customer : MonoBehaviour
 
     private void Awake()
     {
+        scoreManager = FindObjectOfType<ScoreManager>();
+
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         animator = GetComponentInChildren<Animation>();
     }
 
     private void OnEnable()
     {
-        OnRequestComplete += PlayOutAnimation;
+        OnRequestComplete += (potion) => { PlayOutAnimation(); };
+        OnRequestComplete += IncreaseScore;
         OnPatienceDepleted += PlayOutAnimation;
     }
 
@@ -44,14 +51,19 @@ public class Customer : MonoBehaviour
         OnRequestComplete = null;
         OnWrongPotionSubmitted = null;
         OnPatienceDepleted = null;
-}
+    }
+
+    private void OnDestroy()
+    {
+        OnDestroyed?.Invoke();
+    }
 
     // Submit a potion to a customer, checks if it is the right one
     // Invoke the OnRequestComplete event if it is the right one
     public void SubmitPotion(Potion potion)
     {
         if (potion.PotionType == potionRequested)
-            OnRequestComplete?.Invoke();
+            OnRequestComplete?.Invoke(potion);
         else
             OnWrongPotionSubmitted?.Invoke();
     }
@@ -59,5 +71,10 @@ public class Customer : MonoBehaviour
     private void PlayOutAnimation()
     {
         animator.Play("CustomerOut");
+    }
+
+    private void IncreaseScore(Potion potion)
+    {
+        scoreManager.IncreaseScore(potion);
     }
 }
