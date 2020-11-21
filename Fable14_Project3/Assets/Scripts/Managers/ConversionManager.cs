@@ -5,15 +5,27 @@ using UnityEngine;
 public class ConversionManager : MonoBehaviour
 {
     [SerializeField] private PotionType[] possiblePotionTypes = null;
+    [Tooltip("The type to use if no other suitable type is found.")]
+    [SerializeField] private PotionType fallbackPotionType = null;
     private static PotionType[] possiblePTypes = null;
+    private static PotionType fallbackType = null;
 
-    private void Awake() { possiblePTypes = possiblePotionTypes; }
+    private void Awake()
+    {
+        possiblePTypes = possiblePotionTypes;
+        fallbackType = fallbackPotionType;
+    }
 
     public static bool TryGetPotionType(Dictionary<IngredientAttribute, int> attribAmounts,
         out PotionType potionType)
     {
+        if (possiblePTypes == null)
+        {
+            potionType = fallbackType;
+            return false;
+        }
+
         potionType = null;
-        if (possiblePTypes == null) { return false; }
 
         //For each possible potion type,
         foreach (PotionType pType in possiblePTypes)
@@ -28,8 +40,13 @@ public class ConversionManager : MonoBehaviour
             }
         }
 
-        //Return false if potion type is null and true if it's not.
-        return potionType ? true : false;
+        //Return true if potion type is not null and false otherwise.
+        if (potionType) { return true; }
+        else
+        {
+            potionType = fallbackType;
+            return false;
+        }
     }
 
     public static bool MeetsAttributeRequirements(PotionType potionType,

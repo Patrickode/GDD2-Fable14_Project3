@@ -13,11 +13,12 @@ public class Potion : MonoBehaviour
             potionType = value;
             if (potionType)
             {
+                potionLiquid.spriteRenderer.enabled = true;
                 potionLiquid.spriteRenderer.color = potionType.color;
             }
             else
             {
-                potionLiquid.spriteRenderer.color = Color.white;
+                potionLiquid.spriteRenderer.enabled = false;
             }
         }
     }
