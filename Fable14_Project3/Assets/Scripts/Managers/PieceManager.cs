@@ -62,6 +62,36 @@ public class PieceManager : MonoBehaviour
         {
             spawnedIng.sprite = correspondingImage;
         }
+        else
+        {
+            switch (ingToSpawn.SenseType)
+            {
+                default:
+                case IngredientType.LiquidBase:
+                    break;
+                case IngredientType.Sight:
+                    spawnedIng.color = Color.red;
+                    break;
+                case IngredientType.Sound:
+                    spawnedIng.color = new Color(1, 0.498f, 0, 1);
+                    break;
+                case IngredientType.Smell:
+                    spawnedIng.color = Color.yellow;
+                    break;
+                case IngredientType.Taste:
+                    spawnedIng.color = Color.green;
+                    break;
+                case IngredientType.Touch:
+                    spawnedIng.color = Color.blue;
+                    break;
+                case IngredientType.Mind:
+                    spawnedIng.color = new Color(0.624f, 0, 0.773f, 1);
+                    break;
+                case IngredientType.Soul:
+                    spawnedIng.color = new Color(1, 0.412f, 0.706f, 1);
+                    break;
+            }
+        }
 
         spawnedPieces.Add(spawnedIng);
     }
