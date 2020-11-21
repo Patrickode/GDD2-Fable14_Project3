@@ -81,8 +81,6 @@ public class CustomerManager : MonoBehaviour
             OnMaxCustomersLeft?.Invoke();
 
         OnDequeueCustomer?.Invoke(customers.Dequeue());
-
-        PositionCustomers();
     }
 
     private IEnumerator HandleCustomerEnqueing()
@@ -101,7 +99,8 @@ public class CustomerManager : MonoBehaviour
         // Parent them to the Customer Container
         newCustomer.transform.parent = customerContainer.transform;
         newCustomer.OnPatienceDepleted += () => DequeueCustomer();
-        newCustomer.OnRequestComplete += DequeueCustomer;
+        newCustomer.OnRequestComplete += (potion) => DequeueCustomer();
+        newCustomer.OnDestroyed += PositionCustomers;
         // Set a random potion type when the customer is created
         newCustomer.potionRequested = potionTableManager.FetchRandomPotionType();
         // Set a random sprite
