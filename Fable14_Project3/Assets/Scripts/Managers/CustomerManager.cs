@@ -15,6 +15,9 @@ public class CustomerManager : MonoBehaviour
     [SerializeField] private float spaceBetweenCustomers = 10.0f;
 
     [Header("Time fields")]
+    [Tooltip("How long each customer will wait before leaving. X = Minimum, Y = Maximum. If either X or Y is " +
+        "set to less than 0, sets patience equal to float.MaxValue, effectively making it infinite.")]
+    [SerializeField] private Vector2 patienceRange = Vector2.one * 20;
     [SerializeField] private float minTimeBetweenCustomers = 10.0f;
     [SerializeField] private float maxTimeBetweenCustomers = 20.0f;
 
@@ -33,6 +36,19 @@ public class CustomerManager : MonoBehaviour
 
     private void Awake()
     {
+        //If patience range is negative or zero, make patience infinite.
+        if (patienceRange.x <= 0 || patienceRange.y <= 0)
+        {
+            patienceRange = Vector2.one * float.MaxValue;
+        }
+        //Otherwise, swap patience range's x and y if x is greater than y.
+        else if (patienceRange.x > patienceRange.y)
+        {
+            float temp = patienceRange.x;
+            patienceRange.x = patienceRange.y;
+            patienceRange.y = temp;
+        }
+
         customers = new Queue<Customer>();
         customerContainer = FindObjectOfType<CustomerContainer>();
         potionTableManager = FindObjectOfType<PotionTableManager>();
@@ -103,6 +119,8 @@ public class CustomerManager : MonoBehaviour
         newCustomer.OnDestroyed += PositionCustomers;
         // Set a random potion type when the customer is created
         newCustomer.potionRequested = potionTableManager.FetchRandomPotionType();
+        // Give the customer a random amount of patience within the desired range
+        newCustomer.Patience = UnityEngine.Random.Range(patienceRange.x, patienceRange.y);
         // Set a random sprite
         Sprite newCustomerSprite = null;
         if (customerSprites.Count > 0)
@@ -133,7 +151,7 @@ public class CustomerManager : MonoBehaviour
             {
                 c.transform.position = new Vector3(i * spaceBetweenCustomers, 0);
             }
-            
+
             i--;
         }
     }
