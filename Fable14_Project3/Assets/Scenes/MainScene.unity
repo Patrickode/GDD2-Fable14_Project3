@@ -300,6 +300,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f523a41bbf8f71e478d0c23235e8c274, type: 3}
   maxCustomerAmount: 3
   spaceBetweenCustomers: 3
+  patienceRange: {x: 20, y: 20}
   minTimeBetweenCustomers: 1
   maxTimeBetweenCustomers: 2
 --- !u!4 &228799485
@@ -1618,78 +1619,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8943188607196073832, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -2933210825996264323, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188607196073834, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: pieceImage
-      value: 
-      objectReference: {fileID: 4254392973311606827, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188607339980652, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: pieceImage
-      value: 
-      objectReference: {fileID: -4536708532081519838, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188607339980654, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1961558092194469788, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188607778357556, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: pieceImage
-      value: 
-      objectReference: {fileID: 8068907575987929626, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188607778357558, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -580578620766373239, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188608008778660, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: pieceImage
-      value: 
-      objectReference: {fileID: -5428200845322163577, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188608008778662, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 6215385864776741276, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188608161091421, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: pieceImage
-      value: 
-      objectReference: {fileID: -6272378970053181229, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188608161091423, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 3112801457535299789, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188608300621333, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: pieceImage
-      value: 
-      objectReference: {fileID: -6422687463721866280, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
-    - target: {fileID: 8943188608300621335, guid: 00605615d2d4a0342ac74c44b974f948,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -8040341646254310792, guid: 9ae67b5124c654b4e888980071d94257,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00605615d2d4a0342ac74c44b974f948, type: 3}
 --- !u!114 &1345300980 stripped
