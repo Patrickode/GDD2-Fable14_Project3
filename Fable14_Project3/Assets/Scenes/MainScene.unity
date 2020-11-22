@@ -2504,10 +2504,45 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4485693519484086691, guid: 2610858d68de01143afa38bec867647d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5812368121096153098, guid: 2610858d68de01143afa38bec867647d,
         type: 3}
       propertyPath: m_Name
       value: PauseCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755303657467562399, guid: 2610858d68de01143afa38bec867647d,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755303657467562399, guid: 2610858d68de01143afa38bec867647d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755303657467562399, guid: 2610858d68de01143afa38bec867647d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755303658449675800, guid: 2610858d68de01143afa38bec867647d,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755303658449675800, guid: 2610858d68de01143afa38bec867647d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755303658449675800, guid: 2610858d68de01143afa38bec867647d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9003990395959219171, guid: 2610858d68de01143afa38bec867647d,
         type: 3}
