@@ -9,15 +9,16 @@ public class TransitionLoader : MonoBehaviour
     [SerializeField] private Animator transitionAnimator = null;
     [SerializeField] private AnimationClip outClip = null;
     [SerializeField] private float clipDurationOffset = -0.01f;
-    [Space(10)]
+    //[Space(10)]
     //[SerializeField] private SoundEffectsManager sfxManager = null;
-    [SerializeField] private AudioClip transitionSound = null;
+    //[SerializeField] private AudioClip transitionSound = null;
 
-    public static float OutLength { get; private set; } = 0;
+    public static float OutLength { get; private set; } = -1;
 
     public static Action<int> TransitionLoad;
     public static Action TransitionReload;
     public static Action TransitionInOut;
+    public static Action TransitionQuit;
 
     private void Start()
     {
@@ -26,6 +27,8 @@ public class TransitionLoader : MonoBehaviour
 
         TransitionLoad += OnTransitionLoad;
         TransitionInOut += OnTransitionInOut;
+        TransitionReload += OnTransitionReload;
+        TransitionQuit += OnTransitionQuit;
 
         StartCoroutine(DelaySetTrigger("In", 1));
     }
@@ -33,6 +36,8 @@ public class TransitionLoader : MonoBehaviour
     {
         TransitionLoad -= OnTransitionLoad;
         TransitionInOut -= OnTransitionInOut;
+        TransitionReload -= OnTransitionReload;
+        TransitionQuit += OnTransitionQuit;
     }
 
     private void OnTransitionLoad(int index)
@@ -48,6 +53,10 @@ public class TransitionLoader : MonoBehaviour
     {
         StartCoroutine(PerformTransitionLoad(SceneManager.GetActiveScene().buildIndex));
     }
+    private void OnTransitionQuit()
+    {
+        StartCoroutine(PerformTranstionQuit());
+    }
 
     private IEnumerator PerformTransitionLoad(int index)
     {
@@ -55,7 +64,7 @@ public class TransitionLoader : MonoBehaviour
 
         transitionAnimator.SetTrigger("Out");
 
-        float waitTime = Mathf.Max(outClip.length, transitionSound.length);
+        float waitTime = /*Mathf.Max(*/outClip.length/*, transitionSound.length)*/;
         yield return new WaitForSecondsRealtime(waitTime + clipDurationOffset);
 
         SceneManager.LoadScene(index);
@@ -67,6 +76,15 @@ public class TransitionLoader : MonoBehaviour
         transitionAnimator.SetTrigger("Out");
         yield return new WaitForSecondsRealtime(outClip.length);
         transitionAnimator.SetTrigger("In");
+    }
+    private IEnumerator PerformTranstionQuit()
+    {
+        transitionAnimator.SetTrigger("Out");
+
+        float waitTime = /*Mathf.Max(*/outClip.length/*, transitionSound.length)*/;
+        yield return new WaitForSecondsRealtime(waitTime + clipDurationOffset);
+
+        Application.Quit();
     }
 
     private IEnumerator DelaySetTrigger(string trigger, int delayInFrames)

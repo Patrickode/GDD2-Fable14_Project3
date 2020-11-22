@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e7f57dab1ff6b4187cd788ae420e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionTable: {fileID: 11400000, guid: f075af795fca14c4da95841b347dd2e0, type: 2}
+  potionTable: {fileID: 11400000, guid: b5572baa4e4c4ac4987d173a00ea81a5, type: 2}
 --- !u!4 &53735982
 Transform:
   m_ObjectHideFlags: 0
@@ -286,21 +286,10 @@ MonoBehaviour:
   customerPrefab: {fileID: 5716412918244496673, guid: 4b81e32697fa6694ba9ec4a977e1754f,
     type: 3}
   customerSprites:
-  - {fileID: 21300000, guid: 1599656b49220f149b53a2e1f3b0c74b, type: 3}
-  - {fileID: 21300000, guid: 4a71e26e10b129b4db5b47e9783788ea, type: 3}
-  - {fileID: 21300000, guid: 9bcdb01d96a850940a8b860436dfa9e9, type: 3}
-  - {fileID: 21300000, guid: 7e1a05385132e994587fcc5901166128, type: 3}
   - {fileID: 21300000, guid: 2427a7ef87ab116498aaeb4de9b43d55, type: 3}
-  - {fileID: 21300000, guid: bda6fbf2882ef574b87558e427e746bf, type: 3}
-  - {fileID: 21300000, guid: a719a8fdd17fed744933e876227a7660, type: 3}
-  - {fileID: 21300000, guid: 91215289a5a7e474ebcafce78068a5fa, type: 3}
-  - {fileID: 21300000, guid: 2ff677415292c6442927992fe1812053, type: 3}
-  - {fileID: 21300000, guid: 39e95282a3294f44bb6a8b0db633059f, type: 3}
-  - {fileID: 21300000, guid: 2397e206039c2304bacb3fbc968e2c2a, type: 3}
-  - {fileID: 21300000, guid: f523a41bbf8f71e478d0c23235e8c274, type: 3}
-  maxCustomerAmount: 3
+  maxCustomerAmount: 1
   spaceBetweenCustomers: 3
-  patienceRange: {x: 20, y: 20}
+  patienceRange: {x: 0, y: 0}
   minTimeBetweenCustomers: 1
   maxTimeBetweenCustomers: 2
 --- !u!4 &228799485

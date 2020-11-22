@@ -24,7 +24,10 @@ public class PotionTable : ScriptableObject
 
     private void OnEnable()
     {
-        maxWeight = possiblePotionTypes.Sum(p => p.weight);
+        if (possiblePotionTypes != null)
+        {
+            maxWeight = possiblePotionTypes.Sum(p => p.weight);
+        }
     }
 
     // Returns a random potion with probabilities calculated by their weight

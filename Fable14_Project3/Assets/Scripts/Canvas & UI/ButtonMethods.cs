@@ -41,10 +41,7 @@ public class ButtonMethods : MonoBehaviour
 
     public void TogglePauseState() { PauseManager.TogglePause?.Invoke(); }
 
-    /// <summary>
-    /// Quits the game.
-    /// </summary>
-    public void QuitGame() { Application.Quit(); }
+    public void QuitGame() { TransitionLoader.TransitionQuit?.Invoke(); }
 
     /// <summary>
     /// Swaps the currently active menu to another menu.
