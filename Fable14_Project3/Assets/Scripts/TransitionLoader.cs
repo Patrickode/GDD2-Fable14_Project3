@@ -37,7 +37,7 @@ public class TransitionLoader : MonoBehaviour
         TransitionLoad -= OnTransitionLoad;
         TransitionInOut -= OnTransitionInOut;
         TransitionReload -= OnTransitionReload;
-        TransitionQuit += OnTransitionQuit;
+        TransitionQuit -= OnTransitionQuit;
     }
 
     private void OnTransitionLoad(int index)

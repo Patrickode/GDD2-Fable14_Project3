@@ -7,28 +7,24 @@ public class OrderManager : MonoBehaviour
 {
     [SerializeField] private Order orderPrefab = null;
 
-    private CustomerManager customerManager;
-
     private List<Order> orders;
     private OrderContainer orderContainer;
 
     private void Awake()
     {
-        customerManager = FindObjectOfType<CustomerManager>();
         orders = new List<Order>();
         orderContainer = FindObjectOfType<OrderContainer>();
     }
 
     private void OnEnable()
     {
-        customerManager.OnEnqueuedCustomer += CreateOrderFor;
-        customerManager.OnDequeueCustomer += PlayOutAnimation;
+        CustomerManager.OnEnqueuedCustomer += CreateOrderFor;
+        CustomerManager.OnDequeueCustomer += PlayOutAnimation;
     }
 
     private void OnDisable()
     {
-        if (customerManager)
-            customerManager.OnEnqueuedCustomer -= CreateOrderFor;
+        CustomerManager.OnEnqueuedCustomer -= CreateOrderFor;
     }
 
     private void CreateOrderFor(Customer customer)

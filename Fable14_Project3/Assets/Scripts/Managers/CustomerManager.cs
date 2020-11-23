@@ -29,10 +29,10 @@ public class CustomerManager : MonoBehaviour
 
     private Coroutine customerEnqueingCoroutine;
 
-    public event Action OnMaxCustomersReached;
-    public event Action OnMaxCustomersLeft;
-    public event Action<Customer> OnEnqueuedCustomer;
-    public event Action<Customer> OnDequeueCustomer;
+    public static Action OnMaxCustomersReached;
+    public static Action OnMaxCustomersLeft;
+    public static Action<Customer> OnEnqueuedCustomer;
+    public static Action<Customer> OnDequeueCustomer;
 
     private void Awake()
     {
