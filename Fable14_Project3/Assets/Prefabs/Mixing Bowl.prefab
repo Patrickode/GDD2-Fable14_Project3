@@ -483,5 +483,5 @@ MonoBehaviour:
   discardCode: 8
   progressLabel: {fileID: 0}
   progressBarPivot: {fileID: 0}
-  stirDuration: 5
+  stirDuration: 4
   percentPerSecond: 5

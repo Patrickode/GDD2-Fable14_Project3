@@ -17,7 +17,8 @@ public class MixingBowl : MonoBehaviour
     [SerializeField] private TextMeshPro progressLabel = null;
     [SerializeField] private Transform progressBarPivot = null;
     [SerializeField] private float stirDuration = 5.0f;
-    [Tooltip("The percentage the progress bar moves every second. 1 = 100%.")]
+    [Tooltip("The speed at which the progress bar follows stirAmount, in percentage per second. 1 = 100%. " +
+        "Not to be confused with stir duration!")]
     [SerializeField] private float percentPerSecond = 5f;
     private float stirAmount = 0.0f;
     private float lastStirAmount = -1.0f;
