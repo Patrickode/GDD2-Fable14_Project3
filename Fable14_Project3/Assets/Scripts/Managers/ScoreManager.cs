@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public event Action<int> OnScoreChange;
+    public static Action<int> OnScoreChange;
 
     private void Start()
     {
