@@ -76,6 +76,7 @@ public class CookingManager : MonoBehaviour
         ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
         ConversionManager.TryGetPotionType(attributeAmounts, out PotionType pType);
         currentPotion.PotionType = pType;
+        cookingPotion = true;
     }
 
     void Update()
@@ -119,23 +120,12 @@ public class CookingManager : MonoBehaviour
     {
         if (PotionCreationManager.creationState == CreationState.Cooking)
         {
-            if (cookingPotion)
+            // Submit potion to current customer
+            if (cookingPotion && Input.GetKeyDown(submitCode))
             {
-                // Submit potion to current customer
-                if (Input.GetKeyDown(submitCode))
-                {
-                    ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
-                    customerManager.SubmitPotion(currentPotion);
-                    Reset();
-                }
-            }
-            else
-            {
-                // Start cooking potion
-                if (Input.GetKeyDown(submitCode))
-                {
-                    cookingPotion = true;
-                }
+                ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
+                customerManager.SubmitPotion(currentPotion);
+                Reset();
             }
         }
     }
