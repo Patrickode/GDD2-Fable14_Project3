@@ -1642,6 +1642,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -199984120549654342, guid: 9ae67b5124c654b4e888980071d94257,
         type: 3}
+    - target: {fileID: 8943188606911964569, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: pieceImage
+      value: 
+      objectReference: {fileID: -9038750024890201882, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
+    - target: {fileID: 8943188606911964571, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 434272887610006104, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
     - target: {fileID: 8943188607036789605, guid: 00605615d2d4a0342ac74c44b974f948,
         type: 3}
       propertyPath: m_Sprite
@@ -1678,6 +1690,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1961558092194469788, guid: 9ae67b5124c654b4e888980071d94257,
         type: 3}
+    - target: {fileID: 8943188607609909293, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8730638028284073312, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
+    - target: {fileID: 8943188607609909295, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: pieceImage
+      value: 
+      objectReference: {fileID: -8800732154626697505, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
     - target: {fileID: 8943188607778357556, guid: 00605615d2d4a0342ac74c44b974f948,
         type: 3}
       propertyPath: pieceImage
@@ -1701,6 +1725,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 6215385864776741276, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
+    - target: {fileID: 8943188608160446029, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: pieceImage
+      value: 
+      objectReference: {fileID: 851436804369299853, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
+    - target: {fileID: 8943188608160446031, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8498181391250047151, guid: 9ae67b5124c654b4e888980071d94257,
         type: 3}
     - target: {fileID: 8943188608161091421, guid: 00605615d2d4a0342ac74c44b974f948,
         type: 3}
