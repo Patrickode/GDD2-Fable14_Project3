@@ -1618,6 +1618,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8943188606664739553, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: pieceImage
+      value: 
+      objectReference: {fileID: -3304990692472249205, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
+    - target: {fileID: 8943188606664739555, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6142587431505333180, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
+    - target: {fileID: 8943188606715780509, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1610872983239590689, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
+    - target: {fileID: 8943188606715780511, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: pieceImage
+      value: 
+      objectReference: {fileID: -199984120549654342, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
+    - target: {fileID: 8943188607036789605, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3792920592570821136, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
+    - target: {fileID: 8943188607036789607, guid: 00605615d2d4a0342ac74c44b974f948,
+        type: 3}
+      propertyPath: pieceImage
+      value: 
+      objectReference: {fileID: 7240415281364435443, guid: 9ae67b5124c654b4e888980071d94257,
+        type: 3}
     - target: {fileID: 8943188607196073832, guid: 00605615d2d4a0342ac74c44b974f948,
         type: 3}
       propertyPath: m_Sprite
