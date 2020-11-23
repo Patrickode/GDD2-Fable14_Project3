@@ -3,34 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[Serializable]
-public struct IngredientImagePair
-{
-    public Ingredient ingredient;
-    public Sprite image;
-}
-
 public class PieceManager : MonoBehaviour
 {
-    [Tooltip("The list that holds what images correspond to what ingredients.")]
-    [SerializeField] private IngredientImagePair[] ingredientImageList = null;
+    [Tooltip("This array is used for determining which images correspond to which images.")]
+    [SerializeField] private IngredientSource[] ingredientSources = null;
     [Space(15)]
     [SerializeField] private SpriteRenderer piecePrefab = null;
     [SerializeField] private float pieceSpawnHeight = 2.5f;
     [SerializeField] private float pieceSpawnXRange = 1.25f;
+    [Space(10)]
+    [SerializeField] private KeyCode mixCode = KeyCode.Space;
+    [SerializeField] private float jostleIntensity = 1;
+    [SerializeField] private float jostleInterval = 0.25f;
 
     private Dictionary<Ingredient, Sprite> ingredientDict = null;
     private List<SpriteRenderer> spawnedPieces = null;
+    private List<Rigidbody2D> pieceRBs = null;
+    private Coroutine jostleCoroutine = null;
 
     private void Start()
     {
         ingredientDict = new Dictionary<Ingredient, Sprite>();
-        foreach (var pair in ingredientImageList)
+        foreach (IngredientSource source in ingredientSources)
         {
-            ingredientDict.Add(pair.ingredient, pair.image);
+            ingredientDict.Add(source.Ingredient, source.PieceImage);
         }
 
         spawnedPieces = new List<SpriteRenderer>();
+        pieceRBs = new List<Rigidbody2D>();
 
         MixingBowl.IngredientAddedToBowl += SpawnIngredientPiece;
         MixingBowl.MixingComplete += ClearSpawnedPieces;
@@ -43,6 +43,30 @@ public class PieceManager : MonoBehaviour
         MixingBowl.MixingComplete -= ClearSpawnedPieces;
         MixingBowl.ContentsSubmitted -= ClearSpawnedPieces;
         MixingBowl.ContentsDiscarded -= ClearSpawnedPieces;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(mixCode))
+        {
+            jostleCoroutine = StartCoroutine(JostlePieces());
+        }
+        else if (Input.GetKeyUp(mixCode))
+        {
+            if (jostleCoroutine != null) { StopCoroutine(jostleCoroutine); }
+        }
+    }
+
+    private IEnumerator JostlePieces()
+    {
+        while (true)
+        {
+            foreach (Rigidbody2D piece in pieceRBs)
+            {
+                piece.AddForce(Vector2.up * jostleIntensity);
+            }
+            yield return new WaitForSeconds(jostleInterval);
+        }
     }
 
     private void SpawnIngredientPiece(Ingredient ingToSpawn)
@@ -62,17 +86,49 @@ public class PieceManager : MonoBehaviour
         {
             spawnedIng.sprite = correspondingImage;
         }
+        else
+        {
+            switch (ingToSpawn.SenseType)
+            {
+                default:
+                case IngredientType.LiquidBase:
+                    break;
+                case IngredientType.Sight:
+                    spawnedIng.color = Color.red;
+                    break;
+                case IngredientType.Sound:
+                    spawnedIng.color = new Color(1, 0.498f, 0, 1);
+                    break;
+                case IngredientType.Smell:
+                    spawnedIng.color = Color.yellow;
+                    break;
+                case IngredientType.Taste:
+                    spawnedIng.color = Color.green;
+                    break;
+                case IngredientType.Touch:
+                    spawnedIng.color = Color.blue;
+                    break;
+                case IngredientType.Mind:
+                    spawnedIng.color = new Color(0.624f, 0, 0.773f, 1);
+                    break;
+                case IngredientType.Soul:
+                    spawnedIng.color = new Color(1, 0.412f, 0.706f, 1);
+                    break;
+            }
+        }
 
         spawnedPieces.Add(spawnedIng);
+        pieceRBs.Add(spawnedIng.GetComponent<Rigidbody2D>());
     }
 
     private void ClearSpawnedPieces(Dictionary<IngredientAttribute, int> _) { ClearSpawnedPieces(); }
     private void ClearSpawnedPieces()
     {
-        foreach (var piece in spawnedPieces)
+        foreach (SpriteRenderer piece in spawnedPieces)
         {
             Destroy(piece.gameObject);
         }
         spawnedPieces.Clear();
+        pieceRBs.Clear();
     }
 }
