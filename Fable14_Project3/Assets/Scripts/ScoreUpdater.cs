@@ -3,28 +3,26 @@ using TMPro;
 
 public class ScoreUpdater : MonoBehaviour
 {
-    private ScoreManager scoreManager;
-    private TextMeshProUGUI text;
-
+    [SerializeField] private TextMeshProUGUI text;
 
     private void Awake()
     {
-        text = GetComponent<TextMeshProUGUI>();
-        scoreManager = FindObjectOfType<ScoreManager>();
+        if (!text) { text = GetComponent<TextMeshProUGUI>(); }
+        UpdateScoreText(0);
     }
 
     private void OnEnable()
     {
-        scoreManager.OnScoreChange += UpdateScoreText;
+        ScoreManager.OnScoreChange += UpdateScoreText;
     }
 
     private void OnDisable()
     {
-        scoreManager.OnScoreChange -= UpdateScoreText;
+        ScoreManager.OnScoreChange -= UpdateScoreText;
     }
 
     private void UpdateScoreText(int score)
     {
-        text.text = "Score: " + scoreManager.CurrentScore;
+        text.text = $"${score:F2}";
     }
 }
