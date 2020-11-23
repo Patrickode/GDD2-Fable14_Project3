@@ -13,10 +13,12 @@ public class CookingManager : MonoBehaviour
 {
     [Header("Key Codes")]
     [SerializeField] private KeyCode submitCode = KeyCode.Return;
-    [SerializeField] private KeyCode cookCode = KeyCode.Space;
 
     [Header("Cooking Fields")]
-    [SerializeField] private float cookDuration = 5.0f;                         // in seconds
+    [Tooltip("How long to wait before the cooking indicator starts moving, in seconds.")]
+    [SerializeField] private float startDelay = 0.5f;
+    [Tooltip("How long it will take for the cooking indicator to reach the end of the cooking bar, in seconds.")]
+    [SerializeField] private float cookDuration = 5.0f;
     [Tooltip("Percent of cooking duration where potion becomes perfect.")]
     [SerializeField]
     [Range(0.0f, 1.0f)]
@@ -30,10 +32,11 @@ public class CookingManager : MonoBehaviour
     private Potion currentPotion;
 
     private bool cookingPotion = false;
-    private bool potionReady = false;                                           // Potion is ready to be submitted
     private float cookTime = 0.0f;
+    private float delayTime = 0.0f;
 
     public float CookPercent => cookTime / cookDuration;
+    public float DelayPercent => delayTime / startDelay;
 
     private event Action OnPerfect;
     private event Action OnOvercooked;
@@ -79,10 +82,7 @@ public class CookingManager : MonoBehaviour
     {
         HandlePlayerInput();
 
-        if (cookingPotion && !potionReady)
-        {
-            Cook();
-        }
+        if (cookingPotion) { Cook(); }
 
         // For test on Tuesday only
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -121,21 +121,12 @@ public class CookingManager : MonoBehaviour
         {
             if (cookingPotion)
             {
-                if (potionReady)
+                // Submit potion to current customer
+                if (Input.GetKeyDown(submitCode))
                 {
-                    // Submit potion to current customer
-                    if (Input.GetKeyDown(submitCode))
-                    {
-                        ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
-                        customerManager.SubmitPotion(currentPotion);
-                        Reset();
-                    }
-                }
-
-                // Readies potion at current cook state
-                if (Input.GetKeyDown(cookCode))
-                {
-                    potionReady = true;
+                    ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
+                    customerManager.SubmitPotion(currentPotion);
+                    Reset();
                 }
             }
             else
@@ -152,7 +143,8 @@ public class CookingManager : MonoBehaviour
     private void Cook()
     {
         // Update cook values
-        cookTime += Time.deltaTime;
+        if (DelayPercent < 1) { delayTime += Time.deltaTime; }
+        else { cookTime += Time.deltaTime; }
 
         if (CookPercent >= perfectStartPercent)
         {
@@ -161,10 +153,6 @@ public class CookingManager : MonoBehaviour
         if (CookPercent >= perfectEndPercent)
         {
             OnOvercooked?.Invoke();
-        }
-        if (CookPercent >= 1)
-        {
-            potionReady = true;
         }
     }
 
@@ -196,8 +184,8 @@ public class CookingManager : MonoBehaviour
         currentPotion.PotionType = null;
         currentPotion.cookState = CookState.Undercooked;
         cookingPotion = false;
-        potionReady = false;
         cookTime = 0;
+        delayTime = 0;
 
         PotionCreationManager.creationState = CreationState.MixingIngredients;
     }

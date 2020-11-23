@@ -95,9 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mixtureRend: {fileID: 4300162977749366282}
-  potionTypes:
-  - {fileID: 11400000, guid: f4e6a65c8200e9d439987f2f01ff1ac9, type: 2}
-  - {fileID: 11400000, guid: 2da157fb4a1b3b34bb4210c80e1b71a2, type: 2}
 --- !u!1 &2519893901756566592
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,8 +235,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3318072677771017041}
   m_LocalRotation: {x: 0, y: 0, z: 0.53729963, w: 0.8433915}
-  m_LocalPosition: {x: 1.75, y: -0.69, z: 0}
-  m_LocalScale: {x: 2, y: 0.5, z: 1}
+  m_LocalPosition: {x: 1.65, y: -0.5, z: 0}
+  m_LocalScale: {x: 2.5, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 4311395543856983873}
   m_RootOrder: 2
@@ -295,8 +292,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4226307207195449237}
   m_LocalRotation: {x: 0, y: 0, z: -0.53729963, w: 0.8433914}
-  m_LocalPosition: {x: -1.75, y: -0.69, z: 0}
-  m_LocalScale: {x: 2, y: 0.5, z: 1}
+  m_LocalPosition: {x: -1.65, y: -0.5, z: 0}
+  m_LocalScale: {x: 2.5, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 4311395543856983873}
   m_RootOrder: 1
