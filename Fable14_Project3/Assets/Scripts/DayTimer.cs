@@ -9,14 +9,20 @@ public class DayTimer : MonoBehaviour
     [SerializeField] RectTransform timerProgressBar = null;
     [SerializeField] TextMeshProUGUI timerText = null;
     [Space(10)]
-    [Tooltip("How long a day is in seconds. One real world second = one in-universe minute.")]
-    [SerializeField] private float dayLength = 540;
+    [Tooltip("How many diegetic (in-universe) minutes pass in one real-world second.")]
+    [SerializeField] private float minuteSpeed = 1;
+    [Tooltip("How long a day is, in diegetic (in-universe) minutes.")]
+    [SerializeField] private float diegeticDayLength = 480;
     [Tooltip("The hour to start from, in a 24 hour format. Does not affect day length.")]
     [SerializeField] private int startHour = 9;
     [Tooltip("The minute to start from. Does not affect day length.")]
     [SerializeField] private int startMinute = 0;
 
-    public float DayLength { get { return dayLength; } private set { dayLength = value; } }
+    public float DayLength
+    {
+        get { return diegeticDayLength / minuteSpeed; }
+        private set { diegeticDayLength = value; }
+    }
     public float DayProgress { get; private set; } = 0;
     public float PercentThroughDay => DayProgress / DayLength;
 
