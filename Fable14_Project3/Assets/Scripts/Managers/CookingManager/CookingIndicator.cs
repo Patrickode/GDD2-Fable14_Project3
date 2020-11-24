@@ -8,6 +8,7 @@ public class CookingIndicator : MonoBehaviour
 
     [SerializeField] private float barWidth = 4.0f;
     [SerializeField] private float pulseScaleAmount = 1.5f;
+    [SerializeField] private float maxMoveDelta = 0.25f;
     private Vector3 normalScale;
     private Vector3 pulseScale;
 
@@ -31,7 +32,10 @@ public class CookingIndicator : MonoBehaviour
     private void SetPosition()
     {
         Vector3 temp = transform.localPosition;
-        temp.x = Mathf.Lerp(Left, Right, cookingManager.CookPercent);
+        temp.x = Mathf.Clamp(
+            Mathf.Lerp(Left, Right, cookingManager.CookPercent),
+            temp.x - maxMoveDelta, temp.x + maxMoveDelta
+        );
         transform.localPosition = temp;
     }
     private void SetScale()
