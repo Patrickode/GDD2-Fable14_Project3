@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.195}
-  m_SizeDelta: {x: 2, y: 0.385}
+  m_AnchoredPosition: {x: 0, y: -0.2075}
+  m_SizeDelta: {x: 2, y: 0.4525}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1671662699049017378
 MeshRenderer:
@@ -131,15 +131,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
+  m_fontSize: 2.25
   m_fontSizeBase: 2.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.5
-  m_fontSizeMax: 2
+  m_fontSizeMax: 2.25
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -210,8 +210,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2, y: 0.25}
+  m_AnchoredPosition: {x: 0, y: -0.055}
+  m_SizeDelta: {x: 2, y: 0.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &2284664817554148074
 MeshRenderer:
@@ -306,12 +306,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2
+  m_fontSize: 2.5
   m_fontSizeBase: 2.6
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 0.5
-  m_fontSizeMax: 2
+  m_fontSizeMax: 2.5
   m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
@@ -455,7 +455,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3998996325617971416}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.35, z: 0}
+  m_LocalPosition: {x: 0, y: -0.375, z: 0}
   m_LocalScale: {x: 1, y: 0.7, z: 1}
   m_Children:
   - {fileID: 7215597484542926369}
@@ -1067,7 +1067,7 @@ Transform:
   m_GameObject: {fileID: 8993417398192110393}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.25, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 1}
   m_Children:
   - {fileID: 8265220525167028742}
   - {fileID: 3645410736515140824}
