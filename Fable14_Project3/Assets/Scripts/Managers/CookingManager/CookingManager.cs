@@ -90,22 +90,6 @@ public class CookingManager : MonoBehaviour
     {
         HandlePlayerInput();
 
-        if (cookingPotion) { Cook(); }
-
-        // For test on Tuesday only
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            currentPotion.PotionType = Resources.Load<PotionType>("RedTestPotion");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            currentPotion.PotionType = Resources.Load<PotionType>("BlueTestPotion");
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            currentPotion.PotionType = null;
-        }
-
         // Cooks the potion
         //        // if Return (Enter) is pressed 
         //        // if the potion is fully stirred

@@ -2265,6 +2265,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5776835461377635036, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: dayLength
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0627df58cee3eee4489d8fef32181c58, type: 3}
 --- !u!1001 &7522131360026407693
