@@ -2039,6 +2039,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontSize
       value: 72
+    - target: {fileID: 5776835461377635036, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: dayLength
+      value: 540
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0627df58cee3eee4489d8fef32181c58, type: 3}

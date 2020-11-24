@@ -17,7 +17,7 @@ public class ScoreManager : MonoBehaviour
     private string highScoreKey = "hs";
     public float HighScore
     {
-        get => PlayerPrefs.GetFloat(highScoreKey);
+        get => PlayerPrefs.GetFloat(highScoreKey, 0);
         set => PlayerPrefs.SetFloat(highScoreKey, value);
     }
 
