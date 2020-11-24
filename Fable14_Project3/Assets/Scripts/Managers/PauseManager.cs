@@ -19,6 +19,7 @@ public class PauseManager : MonoBehaviour
     public static Action TogglePause;
 
     private bool isPaused = false;
+    private bool pauseAllowed = true;
 
     private void Awake()
     {
@@ -26,14 +27,17 @@ public class PauseManager : MonoBehaviour
 
         PauseGame += OnGamePaused;
         TogglePause += OnTogglePaused;
+        CustomerManager.LastCustomerDequeued += OnLastCustomerDequeued;
     }
     private void OnDestroy()
     {
         //Unpause whenever this is destroyed, so the game can't get stuck in 0 time scale.
+        SetPauseAllowance(true);
         OnGamePaused(false);
 
         PauseGame -= OnGamePaused;
         TogglePause -= OnTogglePaused;
+        CustomerManager.LastCustomerDequeued -= OnLastCustomerDequeued;
     }
 
     private void Update()
@@ -44,15 +48,35 @@ public class PauseManager : MonoBehaviour
         }
     }
 
+    private void OnLastCustomerDequeued()
+    {
+        IEnumerator DelaySet()
+        {
+            yield return new WaitForSeconds(1.5f);
+            PauseGame?.Invoke(false);
+            OnGamePaused(true);
+            pauseAllowed = false;
+        }
+        StartCoroutine(DelaySet());
+    }
+    private void SetPauseAllowance(bool canPause)
+    {
+        if (!canPause) { PauseGame?.Invoke(false); }
+        pauseAllowed = canPause;
+    }
+
     private void OnTogglePaused()
     {
-        soundEffectsManager.PlaySound(togglePauseSound);
-        PauseGame?.Invoke(!isPaused);
+        if (pauseAllowed)
+        {
+            soundEffectsManager.PlaySound(togglePauseSound);
+            PauseGame?.Invoke(!isPaused);
+        }
     }
     private void OnGamePaused(bool paused)
     {
-        //No need to do anything here if the game is already in the state we want it in.
-        if (isPaused == paused) { return; }
+        //No need to do anything here if the game is already in the state we want it in, or pausing isn't allowed.
+        if (!pauseAllowed || isPaused == paused) { return; }
 
         isPaused = paused;
 

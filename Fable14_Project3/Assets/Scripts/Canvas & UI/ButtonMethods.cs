@@ -11,6 +11,7 @@ public class ButtonMethods : MonoBehaviour
 
     private GameObject defaultMenuScreen;
     private SoundEffectsManager soundEffectsManager;
+    private bool suppressOnPauseGame = false;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class ButtonMethods : MonoBehaviour
         soundEffectsManager = FindObjectOfType<SoundEffectsManager>();
 
         PauseManager.PauseGame += OnPauseGame;
+        CustomerManager.LastCustomerDequeued += OnLastCustomerDequeued;
     }
     private void OnDestroy()
     {
@@ -63,9 +65,12 @@ public class ButtonMethods : MonoBehaviour
 
     private void OnPauseGame(bool paused)
     {
+        if (suppressOnPauseGame) { return; }
+
         SetCurrentMenuActive(paused);
         currentMenuScreen = defaultMenuScreen;
     }
+    private void OnLastCustomerDequeued() { suppressOnPauseGame = true; }
 
     private void SetCurrentMenuActive(bool isActive) { SetMenuActive(isActive); }
     /// <summary>

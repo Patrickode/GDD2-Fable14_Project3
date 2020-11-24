@@ -30,12 +30,12 @@ public class ScoreManager : MonoBehaviour
 
     private void OnEnable()
     {
-        DayTimer.DayEnded += UpdateHighScore;
+        CustomerManager.LastCustomerDequeued += UpdateHighScore;
     }
 
     private void OnDisable()
     {
-        DayTimer.DayEnded -= UpdateHighScore;
+        CustomerManager.LastCustomerDequeued -= UpdateHighScore;
     }
 
     public void ResetScore()

@@ -28,11 +28,13 @@ public class CustomerManager : MonoBehaviour
     private PotionTableManager potionTableManager;
 
     private Coroutine customerEnqueingCoroutine;
+    private bool moreCustomersAllowed = true;
 
     public static Action OnMaxCustomersReached;
     public static Action OnMaxCustomersLeft;
     public static Action<Customer> OnEnqueuedCustomer;
     public static Action<Customer> OnDequeueCustomer;
+    public static Action LastCustomerDequeued;
 
     private void Awake()
     {
@@ -63,6 +65,7 @@ public class CustomerManager : MonoBehaviour
     {
         OnMaxCustomersReached += StopEnqueingCustomers;
         OnMaxCustomersLeft += StartEnqueingCustomers;
+        DayTimer.DayEnded += OnDayEnd;
     }
 
     private void OnDisable()
@@ -71,6 +74,7 @@ public class CustomerManager : MonoBehaviour
         OnMaxCustomersLeft = null;
         OnEnqueuedCustomer = null;
         OnDequeueCustomer = null;
+        DayTimer.DayEnded -= OnDayEnd;
     }
 
     private void Update()
@@ -90,11 +94,22 @@ public class CustomerManager : MonoBehaviour
     {
         StopCoroutine(customerEnqueingCoroutine);
     }
+    private void OnDayEnd()
+    {
+        moreCustomersAllowed = false;
+        StopEnqueingCustomers();
+    }
 
     private void DequeueCustomer()
     {
-        if (customers.Count >= maxCustomerAmount)
+        if (moreCustomersAllowed && customers.Count >= maxCustomerAmount)
+        {
             OnMaxCustomersLeft?.Invoke();
+        }
+        else if (!moreCustomersAllowed && customers.Count <= 1)
+        {
+            LastCustomerDequeued?.Invoke();
+        }
 
         OnDequeueCustomer?.Invoke(customers.Dequeue());
     }

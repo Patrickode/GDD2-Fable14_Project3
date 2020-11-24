@@ -45,27 +45,28 @@ public class PieceManager : MonoBehaviour
         MixingBowl.ContentsDiscarded -= ClearSpawnedPieces;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(mixCode))
-        {
-            jostleCoroutine = StartCoroutine(JostlePieces());
-        }
-        else if (Input.GetKeyUp(mixCode))
-        {
-            if (jostleCoroutine != null) { StopCoroutine(jostleCoroutine); }
-        }
-    }
+    private void OnEnable() { jostleCoroutine = StartCoroutine(JostlePieces()); }
+    private void OnDisable() { if (jostleCoroutine != null) { StopCoroutine(jostleCoroutine); } }
 
     private IEnumerator JostlePieces()
     {
         while (true)
         {
-            foreach (Rigidbody2D piece in pieceRBs)
+            //This all ensures that ingredients are jostled immediately on space press, unless space is 
+            //being mashed faster than jostleInterval.
+
+            //If space is down,
+            if (Input.GetKey(mixCode))
             {
-                piece.AddForce(Vector2.up * jostleIntensity);
+                //jostle the pieces, then wait for jostleInterval seconds.
+                foreach (Rigidbody2D piece in pieceRBs)
+                {
+                    piece.AddForce(Vector2.up * jostleIntensity);
+                }
+                yield return new WaitForSeconds(jostleInterval);
             }
-            yield return new WaitForSeconds(jostleInterval);
+            //Otherwise, just move on.
+            else { yield return null; }
         }
     }
 
