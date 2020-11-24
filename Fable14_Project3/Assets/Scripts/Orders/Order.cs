@@ -24,12 +24,17 @@ public class Order : MonoBehaviour
             maxPatience = Customer.Patience;
             potionName.text = requestedPotion.potionName;
 
+            //Get the requirements of the requested potion, and if they're not null but emtpy, make them null
             var reqmnts = requestedPotion.requirements?.DefaultIfEmpty();
+            //if the requirements aren't null (i.e., properly null or empty)
             if (reqmnts != null)
             {
+                //Go through the requirements and compare their values, return the requirement with the largest 
+                //one, and get that one's key
                 var importantAttribute = reqmnts.Aggregate(
                         (req1, req2) => req1.Value > req2.Value ? req1 : req2
                     ).Key;
+                //the key we just got is the attribute we want to display, so get its name and make it a string
                 potionAttribute.text = $"({Enum.GetName(typeof(IngredientAttribute), importantAttribute)})";
             }
         }
