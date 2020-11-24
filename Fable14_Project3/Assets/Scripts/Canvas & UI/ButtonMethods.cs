@@ -7,17 +7,17 @@ public class ButtonMethods : MonoBehaviour
     [Tooltip("The current active menu screen. Changes when menus are swapped. Assigned automatically when " +
         "needed if null. Set in the inspector to set a \"default\" menu screen.")]
     [SerializeField] private GameObject currentMenuScreen = null;
-    //[SerializeField] private AudioClip buttonClickSound = null;
+    [SerializeField] private AudioClip buttonClickSound = null;
 
     private GameObject defaultMenuScreen;
-    //private SoundEffectsManager soundEffectsManager;
+    private SoundEffectsManager soundEffectsManager;
 
     private void Awake()
     {
         if (currentMenuScreen) { defaultMenuScreen = currentMenuScreen; }
         TryInitCurrentMenuScreen();
 
-        //soundEffectsManager = FindObjectOfType<SoundEffectsManager>();
+        soundEffectsManager = FindObjectOfType<SoundEffectsManager>();
 
         PauseManager.PauseGame += OnPauseGame;
     }
@@ -141,8 +141,8 @@ public class ButtonMethods : MonoBehaviour
 
     //// calculatorClick.wav by MAbdurrahman at freesound.org
     //// https://freesound.org/people/MAbdurrahman/sounds/425187/
-    //public void PlayClickSound()
-    //{
-    //    soundEffectsManager.PlaySound(buttonClickSound);
-    //}
+    public void PlayClickSound()
+    {
+        soundEffectsManager.PlaySound(buttonClickSound);
+    }
 }

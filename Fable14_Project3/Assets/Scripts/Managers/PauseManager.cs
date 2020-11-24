@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class PauseManager : MonoBehaviour
 {
-    //private SoundEffectsManager soundEffectsManager;
+    private SoundEffectsManager soundEffectsManager;
 
-    //[SerializeField] private AudioClip togglePauseSound = null;
+    [SerializeField] private AudioClip togglePauseSound = null;
 
     /// <summary>
     /// Action to set the pause state of the game.
@@ -22,7 +22,7 @@ public class PauseManager : MonoBehaviour
 
     private void Awake()
     {
-        //soundEffectsManager = FindObjectOfType<SoundEffectsManager>();
+        soundEffectsManager = FindObjectOfType<SoundEffectsManager>();
 
         PauseGame += OnGamePaused;
         TogglePause += OnTogglePaused;
@@ -46,7 +46,7 @@ public class PauseManager : MonoBehaviour
 
     private void OnTogglePaused()
     {
-        //soundEffectsManager.PlaySound(togglePauseSound);
+        soundEffectsManager.PlaySound(togglePauseSound);
         PauseGame?.Invoke(!isPaused);
     }
     private void OnGamePaused(bool paused)
