@@ -14,11 +14,28 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
+    private string highScoreKey = "hs";
+    public float HighScore
+    {
+        get => PlayerPrefs.GetFloat(highScoreKey);
+        set => PlayerPrefs.SetFloat(highScoreKey, value);
+    }
+
     public static Action<float> OnScoreChange;
 
     private void Start()
     {
         ResetScore();
+    }
+
+    private void OnEnable()
+    {
+        DayTimer.DayEnded += UpdateHighScore;
+    }
+
+    private void OnDisable()
+    {
+        DayTimer.DayEnded -= UpdateHighScore;
     }
 
     public void ResetScore()
@@ -42,5 +59,10 @@ public class ScoreManager : MonoBehaviour
     public void DecreaseScore(PotionType potionType)
     {
         CurrentScore -= potionType.score + 100.01f;
+    }
+
+    private void UpdateHighScore()
+    {
+        HighScore = Mathf.Max(CurrentScore, HighScore);
     }
 }
