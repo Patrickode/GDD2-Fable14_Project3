@@ -4,7 +4,7 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 4850753070874714912
-    second: table elements spritesheet_3
+    second: table elements spritesheet_49
   - first:
       213: 1985387072620161908
     second: table elements spritesheet_0
@@ -19,7 +19,7 @@ TextureImporter:
     second: table elements spritesheet_4
   - first:
       213: 5042530318340118804
-    second: table elements spritesheet_5
+    second: table elements spritesheet_50
   - first:
       213: -1852956358237487594
     second: table elements spritesheet_6
@@ -34,7 +34,7 @@ TextureImporter:
     second: table elements spritesheet_7
   - first:
       213: -4859572955849262802
-    second: table elements spritesheet_42
+    second: table elements spritesheet_b1
   - first:
       213: -6370733272044299831
     second: table elements spritesheet_11
@@ -43,37 +43,37 @@ TextureImporter:
     second: table elements spritesheet_29
   - first:
       213: 5641484587998722169
-    second: table elements spritesheet_13
+    second: table elements spritesheet_12
   - first:
       213: -4179007292776263304
     second: table elements spritesheet_14
   - first:
       213: -1400767602554118834
-    second: table elements spritesheet_15
+    second: table elements spritesheet_14
   - first:
       213: 4475911387735564217
     second: table elements spritesheet_16
   - first:
       213: 4964498227421407768
-    second: table elements spritesheet_17
+    second: table elements spritesheet_20
   - first:
       213: -580578620766373239
-    second: table elements spritesheet_18
+    second: table elements spritesheet_20
   - first:
       213: -8040341646254310792
-    second: table elements spritesheet_19
+    second: table elements spritesheet_44
   - first:
       213: -7399206948789588864
     second: table elements spritesheet_11
   - first:
       213: -2933210825996264323
-    second: table elements spritesheet_21
+    second: table elements spritesheet_28
   - first:
       213: 6215385864776741276
-    second: table elements spritesheet_22
+    second: table elements spritesheet_44
   - first:
       213: 3112801457535299789
-    second: table elements spritesheet_23
+    second: table elements spritesheet_46
   - first:
       213: -2461380466229442527
     second: table elements spritesheet_24
@@ -82,7 +82,7 @@ TextureImporter:
     second: table elements spritesheet_24
   - first:
       213: -3525526841347086036
-    second: table elements spritesheet_42
+    second: table elements spritesheet_b1
   - first:
       213: -5990678868529723302
     second: table elements spritesheet_9
@@ -97,16 +97,16 @@ TextureImporter:
     second: table elements spritesheet_29
   - first:
       213: 1610872983239590689
-    second: table elements spritesheet_31
+    second: table elements spritesheet_40
   - first:
       213: 8730638028284073312
-    second: table elements spritesheet_32
+    second: table elements spritesheet_46
   - first:
       213: -6142587431505333180
-    second: table elements spritesheet_33
+    second: table elements spritesheet_42
   - first:
       213: -8498181391250047151
-    second: table elements spritesheet_34
+    second: table elements spritesheet_44
   - first:
       213: -826965556097959041
     second: table elements spritesheet_7
@@ -115,13 +115,13 @@ TextureImporter:
     second: table elements spritesheet_25
   - first:
       213: -3792920592570821136
-    second: table elements spritesheet_37
+    second: table elements spritesheet_36
   - first:
       213: 434272887610006104
-    second: table elements spritesheet_38
+    second: table elements spritesheet_42
   - first:
       213: -5426847950831095236
-    second: table elements spritesheet_39
+    second: table elements spritesheet_51
   - first:
       213: 214670494049532744
     second: table elements spritesheet_40
@@ -130,7 +130,7 @@ TextureImporter:
     second: table elements spritesheet_41
   - first:
       213: 205586876011314364
-    second: table elements spritesheet_42
+    second: table elements spritesheet_b1
   - first:
       213: 6885815892608713144
     second: table elements spritesheet_0
@@ -154,52 +154,52 @@ TextureImporter:
     second: table elements spritesheet_49
   - first:
       213: -6422687463721866280
-    second: table elements spritesheet_50
+    second: table elements spritesheet_23
   - first:
       213: 8068907575987929626
-    second: table elements spritesheet_51
+    second: table elements spritesheet_21
   - first:
       213: -8263963159638502665
-    second: table elements spritesheet_52
+    second: table elements spritesheet_17
   - first:
       213: -4536708532081519838
-    second: table elements spritesheet_53
+    second: table elements spritesheet_35
   - first:
       213: -199984120549654342
-    second: table elements spritesheet_54
+    second: table elements spritesheet_41
   - first:
       213: 6511742358897275562
     second: table elements spritesheet_0
   - first:
       213: 28874805766802208
-    second: table elements spritesheet_56
+    second: table elements spritesheet_15
   - first:
       213: -6272378970053181229
-    second: table elements spritesheet_57
+    second: table elements spritesheet_33
   - first:
       213: -2385145841147473304
-    second: table elements spritesheet_58
+    second: table elements spritesheet_13
   - first:
       213: -8908762072130474957
-    second: table elements spritesheet_59
+    second: table elements spritesheet_19
   - first:
       213: -5428200845322163577
-    second: table elements spritesheet_60
+    second: table elements spritesheet_31
   - first:
       213: -3304990692472249205
-    second: table elements spritesheet_61
+    second: table elements spritesheet_51
   - first:
       213: -8800732154626697505
-    second: table elements spritesheet_62
+    second: table elements spritesheet_47
   - first:
       213: -8784315878252162477
     second: table elements spritesheet_63
   - first:
       213: 7240415281364435443
-    second: table elements spritesheet_64
+    second: table elements spritesheet_37
   - first:
       213: 851436804369299853
-    second: table elements spritesheet_65
+    second: table elements spritesheet_45
   - first:
       213: 8611688605925368581
     second: table elements spritesheet_66
@@ -214,7 +214,7 @@ TextureImporter:
     second: table elements spritesheet_69
   - first:
       213: -9038750024890201882
-    second: table elements spritesheet_70
+    second: table elements spritesheet_43
   - first:
       213: -5526922284537141502
     second: table elements spritesheet_24
@@ -223,13 +223,13 @@ TextureImporter:
     second: table elements spritesheet_72
   - first:
       213: 7801483715814734893
-    second: table elements spritesheet_73
+    second: table elements spritesheet_50
   - first:
       213: 3710169036911325348
-    second: table elements spritesheet_74
+    second: table elements spritesheet_49
   - first:
       213: -8915634895500151665
-    second: table elements spritesheet_75
+    second: table elements spritesheet_48
   - first:
       213: 6170581015029527080
     second: table elements spritesheet_76
@@ -241,10 +241,22 @@ TextureImporter:
     second: table elements spritesheet_78
   - first:
       213: 8176051556316100562
-    second: table elements spritesheet_15
+    second: table elements spritesheet_14
   - first:
       213: 1961558092194469788
-    second: table elements spritesheet_30
+    second: table elements spritesheet_44
+  - first:
+      213: 3840665782265531137
+    second: table elements spritesheet_48
+  - first:
+      213: 3461978041662357604
+    second: table elements spritesheet_49
+  - first:
+      213: -3112134388983527857
+    second: table elements spritesheet_50
+  - first:
+      213: 6511742358897275562
+    second: table elements spritesheet_b3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -274,7 +286,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -414,27 +426,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 82
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa2bfeabc2b5e5a50800000000000000
-      internalID: 6511742358897275562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: table elements spritesheet_0
       rect:
         serializedVersion: 2
@@ -498,7 +489,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_43
+      name: table elements spritesheet_b2
       rect:
         serializedVersion: 2
         x: 650
@@ -561,7 +552,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_42
+      name: table elements spritesheet_b1
       rect:
         serializedVersion: 2
         x: 650
@@ -666,27 +657,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 244
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0236f92b736515340800000000000000
-      internalID: 4850753070874714912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: table elements spritesheet_4
       rect:
         serializedVersion: 2
@@ -708,28 +678,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 406
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 419dcc9ab9aaaf540800000000000000
-      internalID: 5042530318340118804
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: table elements spritesheet_13
+      name: table elements spritesheet_12
       rect:
         serializedVersion: 2
         x: 163
@@ -751,27 +700,6 @@ TextureImporter:
       weights: []
     - serializedVersion: 2
       name: table elements spritesheet_14
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 80
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 871dd40320f2106c0800000000000000
-      internalID: -4179007292776263304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: table elements spritesheet_15
       rect:
         serializedVersion: 2
         x: 163
@@ -813,7 +741,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_17
+      name: table elements spritesheet_18
       rect:
         serializedVersion: 2
         x: 244
@@ -834,7 +762,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_18
+      name: table elements spritesheet_20
       rect:
         serializedVersion: 2
         x: 244
@@ -855,7 +783,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_19
+      name: table elements spritesheet_22
       rect:
         serializedVersion: 2
         x: 244
@@ -876,7 +804,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_21
+      name: table elements spritesheet_28
       rect:
         serializedVersion: 2
         x: 325
@@ -897,7 +825,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_22
+      name: table elements spritesheet_30
       rect:
         serializedVersion: 2
         x: 406
@@ -918,11 +846,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_23
+      name: table elements spritesheet_32
       rect:
         serializedVersion: 2
         x: 406
-        y: 163
+        y: 164
         width: 80
         height: 80
       alignment: 0
@@ -939,7 +867,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_30
+      name: table elements spritesheet_34
       rect:
         serializedVersion: 2
         x: 406
@@ -960,7 +888,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_31
+      name: table elements spritesheet_40
       rect:
         serializedVersion: 2
         x: 487
@@ -981,7 +909,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_32
+      name: table elements spritesheet_46
       rect:
         serializedVersion: 2
         x: 568
@@ -1002,7 +930,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_33
+      name: table elements spritesheet_38
       rect:
         serializedVersion: 2
         x: 487
@@ -1023,7 +951,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_34
+      name: table elements spritesheet_44
       rect:
         serializedVersion: 2
         x: 568
@@ -1044,7 +972,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_37
+      name: table elements spritesheet_36
       rect:
         serializedVersion: 2
         x: 487
@@ -1065,7 +993,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_38
+      name: table elements spritesheet_42
       rect:
         serializedVersion: 2
         x: 568
@@ -1086,7 +1014,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_52
+      name: table elements spritesheet_17
       rect:
         serializedVersion: 2
         x: 168
@@ -1107,7 +1035,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_56
+      name: table elements spritesheet_15
       rect:
         serializedVersion: 2
         x: 168
@@ -1128,11 +1056,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_58
+      name: table elements spritesheet_13
       rect:
         serializedVersion: 2
         x: 171
-        y: 99
+        y: 101
         width: 67
         height: 44
       alignment: 0
@@ -1149,7 +1077,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_59
+      name: table elements spritesheet_19
       rect:
         serializedVersion: 2
         x: 257
@@ -1170,7 +1098,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_50
+      name: table elements spritesheet_23
       rect:
         serializedVersion: 2
         x: 264
@@ -1191,7 +1119,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_51
+      name: table elements spritesheet_21
       rect:
         serializedVersion: 2
         x: 249
@@ -1212,7 +1140,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_53
+      name: table elements spritesheet_35
       rect:
         serializedVersion: 2
         x: 411
@@ -1220,7 +1148,7 @@ TextureImporter:
         width: 69
         height: 65
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1233,7 +1161,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_57
+      name: table elements spritesheet_33
       rect:
         serializedVersion: 2
         x: 422
@@ -1241,7 +1169,7 @@ TextureImporter:
         width: 49
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1254,7 +1182,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: table elements spritesheet_60
+      name: table elements spritesheet_31
       rect:
         serializedVersion: 2
         x: 424
@@ -1262,7 +1190,7 @@ TextureImporter:
         width: 50
         height: 51
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1270,6 +1198,300 @@ TextureImporter:
       bones: []
       spriteID: 78ae81d47182ba4b0800000000000000
       internalID: -5428200845322163577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 418
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab04bed7083893df0800000000000000
+      internalID: -199984120549654342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 251
+        width: 64
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b84283dc9705222d0800000000000000
+      internalID: -3304990692472249205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 88
+        width: 64
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f18908465f1b7460800000000000000
+      internalID: 7240415281364435443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 416
+        width: 79
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd61e10dbb48dd580800000000000000
+      internalID: -8800732154626697505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 249
+        width: 67
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8930213349e0db00800000000000000
+      internalID: 851436804369299853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 97
+        width: 55
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8cdd0edb8ef8280800000000000000
+      internalID: -9038750024890201882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 421
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cb1220b10744c60800000000000000
+      internalID: 7801483715814734893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 257
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0b0cde41b2d7330800000000000000
+      internalID: 3710169036911325348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 96
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f84f2a2bc4d454480800000000000000
+      internalID: -8915634895500151665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 487
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b4fe42e29cc4530800000000000000
+      internalID: 3840665782265531137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 487
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460cc71cfaa6b0030800000000000000
+      internalID: 3461978041662357604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 487
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f460c53134a7fc4d0800000000000000
+      internalID: -3112134388983527857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 486
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32f7a89a86ffa4b0800000000000000
+      internalID: -5426847950831095236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_b3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 569
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2bfeabc2b5e5a50800000000000000
+      internalID: 6511742358897275562
       vertices: []
       indices: 
       edges: []
