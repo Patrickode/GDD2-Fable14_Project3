@@ -33,42 +33,42 @@ public class DayTimer : MonoBehaviour
 
     private void Update()
     {
+        //Add scaled time to day progress.
+        DayProgress += Time.deltaTime;
+
+        //Set up some counter variables to chunk DayProgress into minutes and seconds,
+        //treated as hours and minutes respectively.
+        int pseudoHours = startHour;
+        int pseudoMinutes = startMinute + (int)DayProgress;
+        bool isAM = true;
+
+        //Subtract 60 from pseudoMinutes until it is between 0 and 59, and add one pseudoHour every time.
+        while (pseudoMinutes >= 60)
+        {
+            pseudoMinutes -= 60;
+            pseudoHours++;
+        }
+        //Toggle isAM whenever pseudohours hits a 12 hour interval.
+        if (pseudoHours % 12 == 0)
+        {
+            isAM = false;
+        }
+        //Subtract 12 from pseudoHours until it's between 1 and 12, and toggle isAM every time.
+        while (pseudoHours > 12)
+        {
+            pseudoHours -= 12;
+            isAM = !isAM;
+        }
+
+        //Make the timer text show the hours, a colon, the minutes, a space, and then AM or PM based on isAM.
+        timerText.text = $"{pseudoHours}:{pseudoMinutes:00} {(isAM ? "AM" : "PM")}";
+
         if (PercentThroughDay < 1)
         {
-            //Add scaled time to day progress.
-            DayProgress += Time.deltaTime;
-
             //Make the timer progress bar equal the percentage of the way through the day.
             Vector3 newScale = timerProgressBar.localScale;
             newScale.x = PercentThroughDay;
             timerProgressBar.localScale = newScale;
-
-            //Set up some counter variables to chunk DayProgress into minutes and seconds,
-            //treated as hours and minutes respectively.
-            int pseudoHours = startHour;
-            int pseudoMinutes = startMinute + (int)DayProgress;
-            bool isAM = true;
-
-            //Subtract 60 from pseudoMinutes until it is between 0 and 59, and add one pseudoHour every time.
-            while (pseudoMinutes >= 60)
-            {
-                pseudoMinutes -= 60;
-                pseudoHours++;
-            }
-            //Toggle isAM whenever pseudohours hits a 12 hour interval.
-            if (pseudoHours % 12 == 0)
-            {
-                isAM = false;
-            }
-            //Subtract 12 from pseudoHours until it's between 1 and 12, and toggle isAM every time.
-            while (pseudoHours > 12)
-            {
-                pseudoHours -= 12;
-                isAM = !isAM;
-            }
-
-            //Make the timer text show the hours, a colon, the minutes, a space, and then AM or PM based on isAM.
-            timerText.text = $"{pseudoHours}:{pseudoMinutes:00} {(isAM ? "AM" : "PM")}";
         }
         else if (!dayEndEventInvoked)
         {

@@ -473,7 +473,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timerProgressBar: {fileID: 848967222084490978}
   timerText: {fileID: 4880754348548417425}
-  dayLength: 540
+  minuteSpeed: 1
+  diegeticDayLength: 480
   startHour: 9
   startMinute: 0
 --- !u!1 &4725757619965471137
