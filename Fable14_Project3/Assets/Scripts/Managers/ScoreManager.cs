@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int currentScore;
-    public int CurrentScore
+    private float currentScore;
+    public float CurrentScore
     {
         get => currentScore;
         set
@@ -14,7 +14,7 @@ public class ScoreManager : MonoBehaviour
         }
     }
 
-    public static Action<int> OnScoreChange;
+    public static Action<float> OnScoreChange;
 
     private void Start()
     {
@@ -28,6 +28,19 @@ public class ScoreManager : MonoBehaviour
 
     public void IncreaseScore(Potion potion)
     {
-        CurrentScore += potion.PotionType.score;
+        float increaseAmount = potion.PotionType.score;
+        if (potion.cookState == CookState.Perfect)
+        {
+            increaseAmount += 20.50f;
+        }
+        else if (potion.cookState == CookState.Overcooked)
+        {
+            increaseAmount -= 15.25f;
+        }
+        CurrentScore += increaseAmount;
+    }
+    public void DecreaseScore(PotionType potionType)
+    {
+        CurrentScore -= potionType.score + 100.01f;
     }
 }

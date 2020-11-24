@@ -27,7 +27,8 @@ public class MixtureUpdater : MonoBehaviour
     {
         mixtureRend.enabled = true;
 
-        if (ConversionManager.TryGetPotionType(attributeAmounts, out PotionType pType))
+        ConversionManager.TryGetPotionType(attributeAmounts, out PotionType pType);
+        if (pType != null)
         {
             mixtureRend.color = pType.color;
         }

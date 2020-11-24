@@ -42,6 +42,7 @@ public class Customer : MonoBehaviour
     {
         OnRequestComplete += (potion) => { PlayOutAnimation(); };
         OnRequestComplete += IncreaseScore;
+        OnWrongPotionSubmitted += () => { PlayOutAnimation(); };
         OnPatienceDepleted += PlayOutAnimation;
     }
 
@@ -65,7 +66,10 @@ public class Customer : MonoBehaviour
         if (potion.PotionType == potionRequested)
             OnRequestComplete?.Invoke(potion);
         else
+        {
+            DecreaseScore(potionRequested);
             OnWrongPotionSubmitted?.Invoke();
+        }
     }
 
     private void PlayOutAnimation()
@@ -76,5 +80,9 @@ public class Customer : MonoBehaviour
     private void IncreaseScore(Potion potion)
     {
         scoreManager.IncreaseScore(potion);
+    }
+    private void DecreaseScore(PotionType potionType)
+    {
+        scoreManager.DecreaseScore(potionType);
     }
 }

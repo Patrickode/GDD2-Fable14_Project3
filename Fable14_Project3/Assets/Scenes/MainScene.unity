@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56e7f57dab1ff6b4187cd788ae420e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  potionTable: {fileID: 11400000, guid: f075af795fca14c4da95841b347dd2e0, type: 2}
+  potionTable: {fileID: 11400000, guid: 536b5a87e15d61446bda7fcc1de0c4f0, type: 2}
 --- !u!4 &53735982
 Transform:
   m_ObjectHideFlags: 0

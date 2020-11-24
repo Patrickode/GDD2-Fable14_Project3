@@ -9,9 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1103cf92e7db8744bf7e63037e4d5cb, type: 3}
-  m_Name: TutorialPotionTable
+  m_Script: {fileID: 11500000, guid: 6429ecc199e549943a8c14863279e239, type: 3}
+  m_Name: Blending Potion
   m_EditorClassIdentifier: 
-  possiblePotionTypes:
-  - potionType: {fileID: 11400000, guid: 5194e8b40f7e6e7409f9c4cee69415a8, type: 2}
-    weight: 1
+  potionName: Blending Potion
+  color: {r: 0.5, g: 0.5, b: 0.5, a: 0.8509804}
+  score: 329.99
+  attributeRequirements:
+  - attribute: 11
+    amount: 4
+  - attribute: 9
+    amount: 4
