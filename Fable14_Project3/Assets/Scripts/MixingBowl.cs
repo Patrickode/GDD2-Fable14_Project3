@@ -78,7 +78,7 @@ public class MixingBowl : MonoBehaviour
 
         if (PotionCreationManager.creationState == CreationState.MixingIngredients)
         {
-            if (Input.GetKeyDown(submitCode))
+            if (Time.timeScale > 0 && Input.GetKeyDown(submitCode))
             {
                 if (addedTypes.Count < 8 || stirAmount < 1)
                 {
@@ -98,7 +98,7 @@ public class MixingBowl : MonoBehaviour
             }
         }
 
-        if (addedTypes.Count > 0 && Input.GetKeyDown(discardCode))
+        if (Time.timeScale > 0 && addedTypes.Count > 0 && Input.GetKeyDown(discardCode))
         {
             ContentsDiscarded?.Invoke();
             ClearMixtureInfo();

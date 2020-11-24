@@ -121,7 +121,7 @@ public class CookingManager : MonoBehaviour
         if (PotionCreationManager.creationState == CreationState.Cooking)
         {
             // Submit potion to current customer
-            if (cookingPotion && Input.GetKeyDown(submitCode))
+            if (Time.timeScale > 0 && cookingPotion && Input.GetKeyDown(submitCode))
             {
                 ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
                 customerManager.SubmitPotion(currentPotion);
