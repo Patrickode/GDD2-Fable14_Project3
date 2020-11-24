@@ -256,7 +256,7 @@ TextureImporter:
     second: table elements spritesheet_50
   - first:
       213: 6511742358897275562
-    second: table elements spritesheet_55
+    second: table elements spritesheet_b3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -286,7 +286,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -1471,6 +1471,27 @@ TextureImporter:
       bones: []
       spriteID: c32f7a89a86ffa4b0800000000000000
       internalID: -5426847950831095236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: table elements spritesheet_b3
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 569
+        width: 360
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa2bfeabc2b5e5a50800000000000000
+      internalID: 6511742358897275562
       vertices: []
       indices: 
       edges: []
