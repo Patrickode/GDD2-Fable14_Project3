@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
+  m_sendNavigationEvents: 0
   m_DragThreshold: 10
 --- !u!4 &332513108
 Transform:
@@ -1290,6 +1290,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1501012109171139026, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2206893990893959841, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3209404050804064938, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3272463434200132806, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541821778799375854, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4725757618478786341, guid: 0627df58cee3eee4489d8fef32181c58,
         type: 3}
       propertyPath: m_Name
@@ -1398,6 +1423,31 @@ PrefabInstance:
     - target: {fileID: 4725757618478786521, guid: 0627df58cee3eee4489d8fef32181c58,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725757619965471139, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4880754348548417425, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776835461377635036, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: dayLength
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299645199149238363, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8299645199149238363, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

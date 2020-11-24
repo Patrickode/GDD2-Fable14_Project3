@@ -39,7 +39,7 @@ public class IngredientSource : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(code))
+        if (Time.timeScale > 0 && Input.GetKeyDown(code))
         {
             if (flickerCoroutine != null) { StopCoroutine(flickerCoroutine); }
             flickerCoroutine = StartCoroutine(Flicker());

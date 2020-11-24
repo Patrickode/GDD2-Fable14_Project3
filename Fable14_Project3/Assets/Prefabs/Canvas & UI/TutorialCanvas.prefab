@@ -399,10 +399,11 @@ MonoBehaviour:
 
 
     Click the arrows below to navigate through the tutorial.'
-  - "Looks like you've already got a customer. Thankfully, they look very patient.\r\n\r\nEach
-    customer will want a specific potion, and it's your job to assemble it. They
-    won\u2019t be as patient as this one; they\u2019ll leave once their patience
-    (the green bar on their order) runs out!\r\n"
+  - "Looks like you've already got a customer...even though the shop\u2019s closed.
+    Thankfully, they look very patient.\r\n\r\nEach customer will want a specific
+    potion, and it's your job to assemble it. They won\u2019t be as patient as this
+    one; they\u2019ll leave once their patience (the green bar on their order) runs
+    out!\r\n"
   - 'Every potion has eight ingredients: a liquid base, five for the senses, one
     for the mind, and one for the soul. You have three of each type on your left.'
   - "To make a specific potion, you need to use ingredients with the same \"attributes.\"
@@ -430,9 +431,9 @@ MonoBehaviour:
     a bonus! Be careful, though, if your potion\u2019s blatantly wrong, you\u2019ll
     be fined for reckless use of magic.\r\n"
   - "Wait, they\u2019re back... maybe we shouldn\u2019t ask what they need all these
-    love potions for.\r\n\r\nStay here and practice as long as you like. When you\u2019re
-    ready to start a proper day of business, open the pause menu in the upper left
-    and return to the main menu. Good luck!\r\n"
+    love potions for.\r\n\r\nYou can practice here as long as you like. When you\u2019re
+    ready to open your doors to more customers, open the pause menu in the upper
+    left and return to the main menu. Good luck!\r\n"
 --- !u!1 &3921794053716861205
 GameObject:
   m_ObjectHideFlags: 0
