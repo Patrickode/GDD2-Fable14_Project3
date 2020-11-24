@@ -21,8 +21,15 @@ public class ScoreUpdater : MonoBehaviour
         ScoreManager.OnScoreChange -= UpdateScoreText;
     }
 
-    private void UpdateScoreText(int score)
+    private void UpdateScoreText(float score)
     {
-        text.text = $"${score:F2}";
+        if (score >= 0)
+        {
+            text.text = $"${score:F2}";
+        }
+        else
+        {
+            text.text = $"-${-score:F2}";
+        }
     }
 }

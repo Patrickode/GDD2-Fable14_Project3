@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1103cf92e7db8744bf7e63037e4d5cb, type: 3}
-  m_Name: TutorialPotionTable
+  m_Name: StandardPotionTable
   m_EditorClassIdentifier: 
   possiblePotionTypes:
   - potionType: {fileID: 11400000, guid: 5194e8b40f7e6e7409f9c4cee69415a8, type: 2}
+    weight: 1
+  - potionType: {fileID: 11400000, guid: f997383f5543b274eb88b4ef34ac43b4, type: 2}
     weight: 1

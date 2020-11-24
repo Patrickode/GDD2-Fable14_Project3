@@ -44,6 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   possiblePotionTypes:
-  - {fileID: 11400000, guid: f4e6a65c8200e9d439987f2f01ff1ac9, type: 2}
-  - {fileID: 11400000, guid: 2da157fb4a1b3b34bb4210c80e1b71a2, type: 2}
+  - {fileID: 11400000, guid: 5194e8b40f7e6e7409f9c4cee69415a8, type: 2}
+  - {fileID: 11400000, guid: f997383f5543b274eb88b4ef34ac43b4, type: 2}
   fallbackPotionType: {fileID: 11400000, guid: c6811e3337a2653448e70c403e168f5a, type: 2}

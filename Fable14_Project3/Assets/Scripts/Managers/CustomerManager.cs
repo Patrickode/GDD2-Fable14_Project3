@@ -116,6 +116,7 @@ public class CustomerManager : MonoBehaviour
         newCustomer.transform.parent = customerContainer.transform;
         newCustomer.OnPatienceDepleted += () => DequeueCustomer();
         newCustomer.OnRequestComplete += (potion) => DequeueCustomer();
+        newCustomer.OnWrongPotionSubmitted += () => DequeueCustomer();
         newCustomer.OnDestroyed += PositionCustomers;
         // Set a random potion type when the customer is created
         newCustomer.potionRequested = potionTableManager.FetchRandomPotionType();

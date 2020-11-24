@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -76,6 +77,12 @@ public class CookingManager : MonoBehaviour
         ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
         ConversionManager.TryGetPotionType(attributeAmounts, out PotionType pType);
         currentPotion.PotionType = pType;
+        StartCoroutine(DelaySetCooking());
+    }
+
+    private IEnumerator DelaySetCooking()
+    {
+        yield return null;
         cookingPotion = true;
     }
 

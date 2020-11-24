@@ -18,22 +18,33 @@ public class Order : MonoBehaviour
         set
         {
             customer = value;
-            potionLiquidRenderer.color = Customer.potionRequested.color;
+            PotionType requestedPotion = Customer.potionRequested;
+
+            potionLiquidRenderer.color = requestedPotion.color;
             maxPatience = Customer.Patience;
-            potionName.text = Customer.potionRequested.potionName;
+            potionName.text = requestedPotion.potionName;
+
+            var reqmnts = requestedPotion.requirements?.DefaultIfEmpty();
+            if (reqmnts != null)
+            {
+                var importantAttribute = reqmnts.Aggregate(
+                        (req1, req2) => req1.Value > req2.Value ? req1 : req2
+                    ).Key;
+                potionAttribute.text = $"({Enum.GetName(typeof(IngredientAttribute), importantAttribute)})";
+            }
         }
     }
 
     public event Action<Order> OnDelete;
 
     private SpriteRenderer potionLiquidRenderer;
-    private TextMeshPro potionName;
+    [SerializeField] private TextMeshPro potionName = null;
+    [SerializeField] private TextMeshPro potionAttribute = null;
     private PatienceBar patienceBar;
 
     private void Awake()
     {
         potionLiquidRenderer = FindObjectsOfType<SpriteRenderer>().First(renderer => renderer.name == "Liquid");
-        potionName = GetComponentInChildren<TextMeshPro>();
         patienceBar = GetComponentInChildren<PatienceBar>();
     }
 

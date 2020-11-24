@@ -20,7 +20,7 @@ public class PotionType : ScriptableObject
     public string potionName;
     public Color color;
     [Tooltip("Score awarded when potion is submitted successfully to a customer that asked for it.")]
-    public int score;
+    public float score;
 
     // To be used in the inspector to set the values of the dictionary
     [SerializeField] private List<AttributeRequirement> attributeRequirements = null;
