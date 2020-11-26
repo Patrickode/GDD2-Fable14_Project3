@@ -17,6 +17,7 @@ public class DayTimer : MonoBehaviour
     [SerializeField] private int startHour = 9;
     [Tooltip("The minute to start from. Does not affect day length.")]
     [SerializeField] private int startMinute = 0;
+    [SerializeField] private Color timeUpColor = new Color(1, 0.5f, 0.5f, 1);
 
     public float DayLength
     {
@@ -72,8 +73,24 @@ public class DayTimer : MonoBehaviour
         }
         else if (!dayEndEventInvoked)
         {
+            timerText.color = timeUpColor;
             DayEnded?.Invoke();
             dayEndEventInvoked = true;
         }
+
+#if UNITY_EDITOR
+        //If the letters of the legendary name are held, immediately end the day.
+        //For testing day end stuff.
+        if (Input.GetKey(KeyCode.B)
+            && Input.GetKey(KeyCode.I)
+            && Input.GetKey(KeyCode.N)
+            && Input.GetKey(KeyCode.G)
+            && Input.GetKey(KeyCode.U)
+            && Input.GetKey(KeyCode.S)
+        )
+        {
+            DayProgress += DayLength - DayProgress;
+        }
+#endif
     }
 }
