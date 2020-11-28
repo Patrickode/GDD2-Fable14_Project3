@@ -193,7 +193,7 @@ TextureImporter:
     second: table elements spritesheet_47
   - first:
       213: -8784315878252162477
-    second: table elements spritesheet_f1
+    second: table elements spritesheet_63
   - first:
       213: 7240415281364435443
     second: table elements spritesheet_37
@@ -202,7 +202,7 @@ TextureImporter:
     second: table elements spritesheet_45
   - first:
       213: 8611688605925368581
-    second: table elements spritesheet_f2
+    second: table elements spritesheet_66
   - first:
       213: -9151730094123718845
     second: table elements spritesheet_0
@@ -1479,12 +1479,12 @@ TextureImporter:
       name: table elements spritesheet_b3
       rect:
         serializedVersion: 2
-        x: 650
-        y: 723
+        x: 289
+        y: 569
         width: 360
         height: 360
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1492,48 +1492,6 @@ TextureImporter:
       bones: []
       spriteID: aa2bfeabc2b5e5a50800000000000000
       internalID: 6511742358897275562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: table elements spritesheet_f1
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 569
-        width: 272
-        height: 382
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 352d4f10047d71680800000000000000
-      internalID: -8784315878252162477
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: table elements spritesheet_f2
-      rect:
-        serializedVersion: 2
-        x: 274
-        y: 569
-        width: 272
-        height: 382
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 503e570192dd28770800000000000000
-      internalID: 8611688605925368581
       vertices: []
       indices: 
       edges: []
