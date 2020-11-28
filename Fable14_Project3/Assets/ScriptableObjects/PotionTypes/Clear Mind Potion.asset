@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6429ecc199e549943a8c14863279e239, type: 3}
-  m_Name: Sedative Potion
+  m_Name: Clear Mind Potion
   m_EditorClassIdentifier: 
-  potionName: Sedative Potion
-  color: {r: 0.75, g: 0.62, b: 0.4875, a: 1}
+  potionName: Clear Mind Potion
+  color: {r: 0.36249998, g: 0.14999998, b: 1, a: 1}
   score: 299.99
   attributeRequirements:
-  - attribute: 6
-    amount: 4
-  - attribute: 3
+  - attribute: 1
     amount: 3
-  - attribute: 0
-    amount: 2
+  - attribute: 6
+    amount: 1
+  - attribute: 9
+    amount: 1
