@@ -17,8 +17,8 @@ MonoBehaviour:
   score: 299.99
   attributeRequirements:
   - attribute: 1
-    amount: 3
+    amount: 4
+  - attribute: 10
+    amount: 2
   - attribute: 6
-    amount: 1
-  - attribute: 9
     amount: 1
