@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: Love Potion
   color: {r: 0.9, g: 0.09000002, b: 0.42749986, a: 1}
-  score: 249.99
+  score: 349.99
   attributeRequirements:
   - attribute: 13
     amount: 5

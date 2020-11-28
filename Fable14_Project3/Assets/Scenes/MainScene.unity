@@ -256,7 +256,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f523a41bbf8f71e478d0c23235e8c274, type: 3}
   maxCustomerAmount: 3
   spaceBetweenCustomers: 3
-  patienceRange: {x: 20, y: 20}
+  patienceRange: {x: 30, y: 40}
   minTimeBetweenCustomers: 1
   maxTimeBetweenCustomers: 2
 --- !u!4 &228799485

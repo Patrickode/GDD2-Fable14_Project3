@@ -10,9 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6429ecc199e549943a8c14863279e239, type: 3}
-  m_Name: Useless Potion
+  m_Name: Confidence Potion
   m_EditorClassIdentifier: 
-  potionName: Useless Potion
-  color: {r: 0.3, g: 0.3, b: 0, a: 1}
-  score: 0
-  attributeRequirements: []
+  potionName: Confidence Potion
+  color: {r: 1, g: 0.8333334, b: 0, a: 1}
+  score: 299.99
+  attributeRequirements:
+  - attribute: 1
+    amount: 4
+  - attribute: 6
+    amount: 3

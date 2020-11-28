@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   potionName: Blending Potion
   color: {r: 0.5, g: 0.5, b: 0.5, a: 0.8509804}
-  score: 329.99
+  score: 299.99
   attributeRequirements:
   - attribute: 11
     amount: 4

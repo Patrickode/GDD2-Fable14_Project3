@@ -10,9 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6429ecc199e549943a8c14863279e239, type: 3}
-  m_Name: Useless Potion
+  m_Name: Sedative Potion
   m_EditorClassIdentifier: 
-  potionName: Useless Potion
-  color: {r: 0.3, g: 0.3, b: 0, a: 1}
-  score: 0
-  attributeRequirements: []
+  potionName: Sedative Potion
+  color: {r: 0.75, g: 0.54375, b: 0.33749998, a: 1}
+  score: 299.99
+  attributeRequirements:
+  - attribute: 6
+    amount: 5
+  - attribute: 3
+    amount: 4
+  - attribute: 0
+    amount: 2
