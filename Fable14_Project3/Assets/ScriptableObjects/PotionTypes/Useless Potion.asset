@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Useless Potion
   m_EditorClassIdentifier: 
   potionName: Useless Potion
-  color: {r: 0.45, g: 0.45, b: 0, a: 1}
+  color: {r: 0.25, g: 0.25, b: 0, a: 1}
   score: 0
   attributeRequirements: []

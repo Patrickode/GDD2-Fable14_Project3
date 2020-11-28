@@ -11,7 +11,8 @@ public class DayTimer : MonoBehaviour
     [Space(10)]
     [Tooltip("How many diegetic (in-universe) minutes pass in one real-world second.")]
     [SerializeField] private float minuteSpeed = 1;
-    [Tooltip("How long a day is, in diegetic (in-universe) minutes.")]
+    [Tooltip("How long a day is, in diegetic (in-universe) minutes. If less than or equal to zero, " +
+        "the day will be effectively infinite.")]
     [SerializeField] private float diegeticDayLength = 480;
     [Tooltip("The hour to start from, in a 24 hour format. Does not affect day length.")]
     [SerializeField] private int startHour = 9;
@@ -40,7 +41,7 @@ public class DayTimer : MonoBehaviour
         //Set up some counter variables to chunk DayProgress into minutes and seconds,
         //treated as hours and minutes respectively.
         int pseudoHours = startHour;
-        int pseudoMinutes = startMinute + (int)DayProgress;
+        int pseudoMinutes = startMinute + (int)(DayProgress * minuteSpeed);
         bool isAM = true;
 
         //Subtract 60 from pseudoMinutes until it is between 0 and 59, and add one pseudoHour every time.

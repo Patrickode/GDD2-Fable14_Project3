@@ -1683,6 +1683,11 @@ PrefabInstance:
       propertyPath: diegeticDayLength
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5776835461377635036, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: minuteSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8299645199149238363, guid: 0627df58cee3eee4489d8fef32181c58,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2311,6 +2316,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: ConversionManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8325954156140105757, guid: b2eb316c3c5beb74ba3ccb43b52dd021,
+        type: 3}
+      propertyPath: possiblePotionTypes
+      value: 
+      objectReference: {fileID: 11400000, guid: b5572baa4e4c4ac4987d173a00ea81a5,
+        type: 2}
     - target: {fileID: 8325954156140105758, guid: b2eb316c3c5beb74ba3ccb43b52dd021,
         type: 3}
       propertyPath: m_LocalPosition.x

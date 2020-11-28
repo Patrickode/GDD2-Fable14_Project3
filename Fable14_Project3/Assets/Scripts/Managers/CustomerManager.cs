@@ -136,7 +136,7 @@ public class CustomerManager : MonoBehaviour
         // Set a random potion type when the customer is created
         newCustomer.potionRequested = potionTableManager.FetchRandomPotionType();
         // Give the customer a random amount of patience within the desired range
-        newCustomer.Patience = UnityEngine.Random.Range(patienceRange.x, patienceRange.y);
+        newCustomer.InitPatience(UnityEngine.Random.Range(patienceRange.x, patienceRange.y));
         // Set a random sprite
         Sprite newCustomerSprite = null;
         if (customerSprites.Count > 0)

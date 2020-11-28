@@ -25,7 +25,7 @@ public enum IngredientAttribute
     Relaxed,
     Dark,
     Bright,
-    Basic,
+    Vital,
     Pure,
     Simple,
     Complex,

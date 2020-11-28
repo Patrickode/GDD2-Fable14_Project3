@@ -43,7 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf23d172f1fba143af314267cf510f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  possiblePotionTypes:
-  - {fileID: 11400000, guid: 5194e8b40f7e6e7409f9c4cee69415a8, type: 2}
-  - {fileID: 11400000, guid: f997383f5543b274eb88b4ef34ac43b4, type: 2}
+  possiblePotionTypes: {fileID: 11400000, guid: 536b5a87e15d61446bda7fcc1de0c4f0,
+    type: 2}
   fallbackPotionType: {fileID: 11400000, guid: c6811e3337a2653448e70c403e168f5a, type: 2}

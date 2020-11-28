@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Blending Potion
   m_EditorClassIdentifier: 
   potionName: Blending Potion
-  color: {r: 0.5, g: 0.5, b: 0.5, a: 0.8509804}
-  score: 329.99
+  color: {r: 0.5, g: 0.5, b: 0.5, a: 0.8}
+  score: 299.99
   attributeRequirements:
   - attribute: 11
-    amount: 4
-  - attribute: 9
-    amount: 4
+    amount: 5
+  - attribute: 1
+    amount: 2
