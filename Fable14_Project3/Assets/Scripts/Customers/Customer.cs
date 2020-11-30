@@ -19,6 +19,7 @@ public class Customer : MonoBehaviour
 
     // Time (in seconds) a customer will wait for their potion before leaving
     private float patience = 20.0f;
+    private float startPatience = 20.0f;
     public float Patience
     {
         get => patience;
@@ -28,6 +29,13 @@ public class Customer : MonoBehaviour
             if (patience <= 0)
                 OnPatienceDepleted?.Invoke();
         }
+    }
+    public float PatiencePercentLeft => patience / startPatience;
+
+    public void InitPatience(float patience)
+    {
+        Patience = patience;
+        startPatience = patience;
     }
 
     private void Awake()
@@ -79,10 +87,49 @@ public class Customer : MonoBehaviour
 
     private void IncreaseScore(Potion potion)
     {
-        scoreManager.IncreaseScore(potion);
+        float score = potion.PotionType.score;
+
+        //Add bonuses / penalties for cook state.
+        score = ApplyCookStateModifiers(score, potion.cookState);
+
+        float roundedScore = Mathf.Round(score);
+        float bonus = 0.30f;
+        float maxBonusPercent = 0.75f;
+        float minBonusSeconds = 5;
+
+        //If more than more than the max percentage of time is left, don't add extra, just add the full bonus.
+        if (PatiencePercentLeft > maxBonusPercent)
+        {
+            score += roundedScore * bonus;
+        }
+        //Otherwise, add to the score based on how much patience is left. No bonus for less that 5 seconds left.
+        else if (patience > minBonusSeconds)
+        {
+            score += roundedScore * Mathf.Lerp(
+                0,
+                bonus,
+                (patience - minBonusSeconds) / (startPatience - minBonusSeconds)
+            );
+        }
+
+        scoreManager.IncreaseScore(score);
     }
     private void DecreaseScore(PotionType potionType)
     {
-        scoreManager.DecreaseScore(potionType);
+        scoreManager.DecreaseScore(potionType.score - 100.01f);
+    }
+
+    private float ApplyCookStateModifiers(float scoreToModify, CookState potionState)
+    {
+        switch (potionState)
+        {
+            default:
+            case CookState.Undercooked:
+                return scoreToModify;
+            case CookState.Perfect:
+                return scoreToModify + 20f;
+            case CookState.Overcooked:
+                return scoreToModify - 15f;
+        }
     }
 }

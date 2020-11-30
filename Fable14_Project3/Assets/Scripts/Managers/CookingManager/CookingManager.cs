@@ -89,6 +89,7 @@ public class CookingManager : MonoBehaviour
     void Update()
     {
         HandlePlayerInput();
+        if (cookingPotion) { Cook(); }
 
         // Cooks the potion
         //        // if Return (Enter) is pressed 

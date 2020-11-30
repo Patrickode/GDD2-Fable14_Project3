@@ -30,12 +30,12 @@ public class ScoreManager : MonoBehaviour
 
     private void OnEnable()
     {
-        DayTimer.DayEnded += UpdateHighScore;
+        CustomerManager.LastCustomerDequeued += UpdateHighScore;
     }
 
     private void OnDisable()
     {
-        DayTimer.DayEnded -= UpdateHighScore;
+        CustomerManager.LastCustomerDequeued -= UpdateHighScore;
     }
 
     public void ResetScore()
@@ -43,23 +43,18 @@ public class ScoreManager : MonoBehaviour
         currentScore = 0;
     }
 
-    public void IncreaseScore(Potion potion)
+    public void IncreaseScore(float increaseAmount)
     {
-        float increaseAmount = potion.PotionType.score;
-        if (potion.cookState == CookState.Perfect)
-        {
-            increaseAmount += 20.50f;
-        }
-        else if (potion.cookState == CookState.Overcooked)
-        {
-            increaseAmount -= 15.25f;
-        }
+        increaseAmount = SanitizeScore(increaseAmount);
         CurrentScore += increaseAmount;
     }
-    public void DecreaseScore(PotionType potionType)
+    public void DecreaseScore(float decreaseAmount)
     {
-        CurrentScore -= potionType.score + 100.01f;
+        decreaseAmount = SanitizeScore(decreaseAmount);
+        CurrentScore -= decreaseAmount;
     }
+
+    private float SanitizeScore(float scoreToSanitize) { return Mathf.Round(scoreToSanitize * 100f) / 100f; }
 
     private void UpdateHighScore()
     {

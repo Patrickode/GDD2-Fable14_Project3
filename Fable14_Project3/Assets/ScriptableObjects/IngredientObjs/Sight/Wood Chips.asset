@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 0}
   senseType: 1
-  attributes: 090000000400000000000000
+  attributes: 0b0000000400000000000000
