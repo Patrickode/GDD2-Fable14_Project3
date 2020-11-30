@@ -7,7 +7,6 @@ public class Doorbell : MonoBehaviour
     [SerializeField]
     private AudioClip doorBellSound = null;
 
-
     void Start()
     {
         FindObjectOfType<SoundEffectsManager>().PlaySound(doorBellSound);
