@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ConversionManager : MonoBehaviour
 {
-    [SerializeField] private PotionType[] possiblePotionTypes = null;
+    [SerializeField] private PotionTable possiblePotionTypes = null;
     [Tooltip("The type to use if no other suitable type is found.")]
     [SerializeField] private PotionType fallbackPotionType = null;
     private static PotionType[] possiblePTypes = null;
@@ -12,7 +12,7 @@ public class ConversionManager : MonoBehaviour
 
     private void Awake()
     {
-        possiblePTypes = possiblePotionTypes;
+        possiblePTypes = possiblePotionTypes.Types;
         fallbackType = fallbackPotionType;
     }
 

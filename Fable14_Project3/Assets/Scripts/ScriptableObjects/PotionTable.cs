@@ -22,6 +22,19 @@ public class PotionTable : ScriptableObject
     [SerializeField] private List<PotionProbability> possiblePotionTypes = null;
     private int maxWeight;
 
+    public PotionType[] Types
+    {
+        get
+        {
+            PotionType[] pTypes = new PotionType[possiblePotionTypes.Count];
+            for (int i = 0; i < possiblePotionTypes.Count; i++)
+            {
+                pTypes[i] = possiblePotionTypes[i].potionType;
+            }
+            return pTypes;
+        }
+    }
+
     private void OnEnable()
     {
         if (possiblePotionTypes != null)

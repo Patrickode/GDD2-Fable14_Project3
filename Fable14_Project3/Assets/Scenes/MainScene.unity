@@ -256,7 +256,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f523a41bbf8f71e478d0c23235e8c274, type: 3}
   maxCustomerAmount: 3
   spaceBetweenCustomers: 3
-  patienceRange: {x: 20, y: 20}
+  patienceRange: {x: 30, y: 40}
   minTimeBetweenCustomers: 1
   maxTimeBetweenCustomers: 2
 --- !u!4 &228799485
@@ -2044,6 +2044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dayLength
       value: 540
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776835461377635036, guid: 0627df58cee3eee4489d8fef32181c58,
+        type: 3}
+      propertyPath: minuteSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0627df58cee3eee4489d8fef32181c58, type: 3}
