@@ -10,6 +10,12 @@ public class MixingBowl : MonoBehaviour
     [SerializeField] private KeyCode stirCode = KeyCode.Space;
     [SerializeField] private KeyCode discardCode = KeyCode.Backspace;
 
+    [Space(10)]
+    [SerializeField] private AudioClip poofSound = null;
+    [SerializeField] private AudioClip stirringSound = null;
+    [SerializeField] private AudioClip splashSound = null;
+    private SoundEffectsManager soundEffectsManager;
+
     private HashSet<IngredientType> addedTypes;
     private Dictionary<IngredientAttribute, int> attributeAmounts;
     // For Stirring
@@ -44,6 +50,11 @@ public class MixingBowl : MonoBehaviour
     /// </summary>
     public static Action ContentsDiscarded;
 
+    private void Awake()
+    {
+        soundEffectsManager = FindObjectOfType<SoundEffectsManager>();
+    }
+
     private void Start()
     {
         progressBarPivot.localScale = new Vector3(
@@ -61,6 +72,18 @@ public class MixingBowl : MonoBehaviour
     private void OnDestroy()
     {
         IngredientSource.IngredientUsed -= AddIngredientAttributes;
+    }
+
+    private void OnEnable()
+    {
+        IngredientAddedToBowl += PlayPoofSound;
+        ContentsDiscarded += PlayPoofSound;
+    }
+
+    private void OnDisable()
+    {
+        IngredientAddedToBowl = null;
+        ContentsDiscarded = null;
     }
 
     private void Update()
@@ -93,10 +116,22 @@ public class MixingBowl : MonoBehaviour
             }
             else if (Input.GetKey(stirCode))
             {
+                if (addedTypes.Count >= 8 && stirAmount < 1)
+                {
+                    // Make sounds
+                    PlayStirringSound();
+                }
+
                 //Stir the mixture if all ingredients have been added and the mixture is not fully stirred already
                 if (addedTypes.Count >= 8 && stirAmount < 1) { stirAmount += Time.deltaTime / stirDuration; }
             }
         }
+
+        if (Input.GetKeyUp(stirCode) || PotionCreationManager.creationState != CreationState.MixingIngredients || stirAmount >= 1)
+        {
+            StopStirringSound();
+        }
+        
 
         if (Time.timeScale > 0 && addedTypes.Count > 0 && Input.GetKeyDown(discardCode))
         {
@@ -108,6 +143,7 @@ public class MixingBowl : MonoBehaviour
         if (stirAmount >= 1 && lastStirAmount < 1)
         {
             InvokePoofAction();
+            PlaySplashSound();
             MixingComplete?.Invoke(attributeAmounts);
         }
         lastStirAmount = stirAmount;
@@ -151,6 +187,38 @@ public class MixingBowl : MonoBehaviour
 
         InvokePoofAction();
     }
+
+    #region Sounds
+    private void PlayPoofSound()
+    {
+        soundEffectsManager.PlaySound(poofSound);
+    }
+
+    private void PlayPoofSound(Ingredient ingredient)
+    {
+        PlayPoofSound();
+    }
+
+    private void PlayStirringSound()
+    {
+        soundEffectsManager.StartLoop(stirringSound);
+    }
+
+    private void StopStirringSound()
+    {
+        soundEffectsManager.StopLoop();
+    }
+
+    private void PlaySplashSound()
+    {
+        soundEffectsManager.PlaySound(splashSound);
+    }
+
+    private void PlaySplashSound(Dictionary<IngredientAttribute, int> mix)
+    {
+        PlaySplashSound();
+    }
+    #endregion
 
     private void InvokePoofAction() { ParticleManager.SummonPoof?.Invoke(transform.position, Vector3.one * 2.5f); }
 

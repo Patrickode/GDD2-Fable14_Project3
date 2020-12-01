@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class Customer : MonoBehaviour
 {
+    private SoundEffectsManager soundEffectsManager;
+
+    [SerializeField] private AudioClip cashRegisterSound = null;
+
     private ScoreManager scoreManager;
 
     private Animation animator;
@@ -40,6 +44,8 @@ public class Customer : MonoBehaviour
 
     private void Awake()
     {
+        soundEffectsManager = FindObjectOfType<SoundEffectsManager>();
+
         scoreManager = FindObjectOfType<ScoreManager>();
 
         SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -50,6 +56,7 @@ public class Customer : MonoBehaviour
     {
         OnRequestComplete += (potion) => { PlayOutAnimation(); };
         OnRequestComplete += IncreaseScore;
+        OnRequestComplete += PlayCashRegisterSound;
         OnWrongPotionSubmitted += () => { PlayOutAnimation(); };
         OnPatienceDepleted += PlayOutAnimation;
     }
@@ -132,4 +139,16 @@ public class Customer : MonoBehaviour
                 return scoreToModify - 15f;
         }
     }
+
+    #region Sounds
+    private void PlayCashRegisterSound()
+    {
+        soundEffectsManager.PlaySound(cashRegisterSound);
+    }
+
+    private void PlayCashRegisterSound(Potion potion)
+    {
+        PlayCashRegisterSound();
+    }
+    #endregion
 }

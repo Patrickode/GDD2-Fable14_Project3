@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6585810788687012463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6585810788687012457}
+  - component: {fileID: 6585810788687012456}
+  m_Layer: 0
+  m_Name: CustomerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6585810788687012457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585810788687012463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6585810788687012456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6585810788687012463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fae7358dd083f4c811608ea6e9efd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dingSound: {fileID: 8300000, guid: e638df0d27951bb4199ff80664989684, type: 3}
+  footstepsSound: {fileID: 8300000, guid: 06606933453f68345ae946381928d612, type: 3}
+  customerPrefab: {fileID: 5716412918244496673, guid: 4b81e32697fa6694ba9ec4a977e1754f,
+    type: 3}
+  customerSprites:
+  - {fileID: 21300000, guid: 1599656b49220f149b53a2e1f3b0c74b, type: 3}
+  - {fileID: 21300000, guid: 4a71e26e10b129b4db5b47e9783788ea, type: 3}
+  - {fileID: 21300000, guid: 9bcdb01d96a850940a8b860436dfa9e9, type: 3}
+  - {fileID: 21300000, guid: 7e1a05385132e994587fcc5901166128, type: 3}
+  - {fileID: 21300000, guid: 2427a7ef87ab116498aaeb4de9b43d55, type: 3}
+  - {fileID: 21300000, guid: bda6fbf2882ef574b87558e427e746bf, type: 3}
+  - {fileID: 21300000, guid: a719a8fdd17fed744933e876227a7660, type: 3}
+  - {fileID: 21300000, guid: 91215289a5a7e474ebcafce78068a5fa, type: 3}
+  - {fileID: 21300000, guid: 2ff677415292c6442927992fe1812053, type: 3}
+  - {fileID: 21300000, guid: 39e95282a3294f44bb6a8b0db633059f, type: 3}
+  - {fileID: 21300000, guid: 2397e206039c2304bacb3fbc968e2c2a, type: 3}
+  - {fileID: 21300000, guid: f523a41bbf8f71e478d0c23235e8c274, type: 3}
+  maxCustomerAmount: 3
+  spaceBetweenCustomers: 3
+  patienceRange: {x: 20, y: 20}
+  minTimeBetweenCustomers: 1
+  maxTimeBetweenCustomers: 2

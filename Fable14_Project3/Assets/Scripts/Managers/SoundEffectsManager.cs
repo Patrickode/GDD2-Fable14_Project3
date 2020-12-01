@@ -24,6 +24,26 @@ public class SoundEffectsManager : MonoBehaviour
             audioSource.PlayOneShot(sound);
     }
 
+    public void StartLoop(AudioClip sound)
+    {
+        if (audioSource && !audioSource.isPlaying)
+        {
+            audioSource.clip = sound;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+    }    
+
+    public void StopLoop()
+    {
+        if (audioSource)
+        {
+            audioSource.loop = false;
+            audioSource.clip = null;
+            
+        }
+    }
+
     public void ToggleMute() { SetMute(!audioSource.mute); }
 
     public void SetMute(bool mute)

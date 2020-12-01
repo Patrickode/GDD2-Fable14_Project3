@@ -6,6 +6,12 @@ using UnityEngine;
 
 public class CustomerManager : MonoBehaviour
 {
+    [Header("Sound fields")]
+    private SoundEffectsManager soundEffectsManager;
+    [SerializeField] AudioClip dingSound = null;
+    [SerializeField] AudioClip footstepsSound = null;
+
+
     [SerializeField] private Customer customerPrefab = null;
     [SerializeField] private List<Sprite> customerSprites = null;
 
@@ -38,6 +44,8 @@ public class CustomerManager : MonoBehaviour
 
     private void Awake()
     {
+        soundEffectsManager = FindObjectOfType<SoundEffectsManager>();
+
         //If patience range is negative or zero, make patience infinite.
         if (patienceRange.x <= 0 || patienceRange.y <= 0)
         {
@@ -65,6 +73,8 @@ public class CustomerManager : MonoBehaviour
     {
         OnMaxCustomersReached += StopEnqueingCustomers;
         OnMaxCustomersLeft += StartEnqueingCustomers;
+        OnEnqueuedCustomer += PlayCustomerEnter;
+        OnDequeueCustomer += PlayCustomerLeave;
         DayTimer.DayEnded += OnDayEnd;
     }
 
@@ -176,4 +186,27 @@ public class CustomerManager : MonoBehaviour
     {
         CurrentCustomer.SubmitPotion(potion);
     }
+
+    #region Sounds
+    private void PlayCustomerEnter()
+    {
+        soundEffectsManager.PlaySound(dingSound);
+        soundEffectsManager.PlaySound(footstepsSound);
+    }
+
+    private void PlayCustomerEnter(Customer customer)
+    {
+        PlayCustomerEnter();
+    }
+
+    private void PlayCustomerLeave()
+    {
+        soundEffectsManager.PlaySound(footstepsSound);
+    }
+
+    private void PlayCustomerLeave(Customer customer)
+    {
+        PlayCustomerLeave();
+    }
+    #endregion
 }
