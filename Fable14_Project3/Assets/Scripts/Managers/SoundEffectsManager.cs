@@ -4,8 +4,9 @@
 public class SoundEffectsManager : MonoBehaviour
 {
     private AudioSource audioSource;
-
     public GameObject soundEffectsManagerPrefab;
+
+    private bool playingLoop = false;
 
     private void Awake()
     {
@@ -22,6 +23,29 @@ public class SoundEffectsManager : MonoBehaviour
     {
         if (audioSource)
             audioSource.PlayOneShot(sound);
+    }
+
+    public void StartLoop(AudioClip sound)
+    {
+        if (audioSource && !playingLoop)
+        {
+            playingLoop = true;
+
+            audioSource.clip = sound;
+            audioSource.loop = true;
+            audioSource.Play();
+        }
+    }    
+
+    public void StopLoop()
+    {
+        if (audioSource)
+        {
+            playingLoop = false;
+
+            audioSource.loop = false;
+            audioSource.clip = null;
+        }
     }
 
     public void ToggleMute() { SetMute(!audioSource.mute); }

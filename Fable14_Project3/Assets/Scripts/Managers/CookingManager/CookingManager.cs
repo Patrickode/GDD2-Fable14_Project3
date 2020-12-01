@@ -12,6 +12,10 @@ public enum CookState
 
 public class CookingManager : MonoBehaviour
 {
+    [Header("Sound Fields")]
+    [SerializeField] private AudioClip cookingSound = null;
+    private SoundEffectsManager soundEffectsManager;
+
     [Header("Key Codes")]
     [SerializeField] private KeyCode submitCode = KeyCode.Return;
 
@@ -39,11 +43,13 @@ public class CookingManager : MonoBehaviour
     public float CookPercent => cookTime / cookDuration;
     public float DelayPercent => delayTime / startDelay;
 
+    private event Action OnCookingStarted;
     private event Action OnPerfect;
     private event Action OnOvercooked;
 
     private void Awake()
     {
+        soundEffectsManager = FindObjectOfType<SoundEffectsManager>();
         customerManager = FindObjectOfType<CustomerManager>();
         currentPotion = GetComponentInChildren<Potion>();
     }
@@ -60,6 +66,7 @@ public class CookingManager : MonoBehaviour
 
     private void OnEnable()
     {
+        OnCookingStarted += PlayCookingSound;
         OnPerfect += SetPerfect;
         OnOvercooked += SetOvercooked;
         MixingBowl.ContentsSubmitted += AssignPotionType;
@@ -67,6 +74,7 @@ public class CookingManager : MonoBehaviour
 
     private void OnDisable()
     {
+        OnCookingStarted -= PlayCookingSound;
         OnPerfect -= SetPerfect;
         OnOvercooked -= SetOvercooked;
         MixingBowl.ContentsSubmitted -= AssignPotionType;
@@ -84,6 +92,7 @@ public class CookingManager : MonoBehaviour
     {
         yield return null;
         cookingPotion = true;
+        OnCookingStarted?.Invoke();
     }
 
     void Update()
@@ -115,6 +124,15 @@ public class CookingManager : MonoBehaviour
             // Submit potion to current customer
             if (Time.timeScale > 0 && cookingPotion && Input.GetKeyDown(submitCode))
             {
+                if (CookPercent >= perfectStartPercent)
+                {
+                    OnPerfect?.Invoke();
+                }
+                if (CookPercent >= perfectEndPercent)
+                {
+                    OnOvercooked?.Invoke();
+                }
+
                 ParticleManager.SummonPoof(transform.position, Vector3.one * 2.5f);
                 customerManager.SubmitPotion(currentPotion);
                 Reset();
@@ -127,15 +145,6 @@ public class CookingManager : MonoBehaviour
         // Update cook values
         if (DelayPercent < 1) { delayTime += Time.deltaTime; }
         else { cookTime += Time.deltaTime; }
-
-        if (CookPercent >= perfectStartPercent)
-        {
-            OnPerfect?.Invoke();
-        }
-        if (CookPercent >= perfectEndPercent)
-        {
-            OnOvercooked?.Invoke();
-        }
     }
 
     //    /// <summary>
@@ -181,4 +190,11 @@ public class CookingManager : MonoBehaviour
     {
         currentPotion.cookState = CookState.Overcooked;
     }
+
+    private void PlayCookingSound()
+    {
+        soundEffectsManager.PlaySound(cookingSound);
+    }
+
+    
 }
