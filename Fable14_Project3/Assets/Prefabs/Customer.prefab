@@ -45,6 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cashRegisterSound: {fileID: 8300000, guid: 837bc9692d361494692f360cd18cc5da, type: 3}
+  coinsSound: {fileID: 8300000, guid: 3032abfe4b262554f840dd6ce067f6ce, type: 3}
+  failSound: {fileID: 8300000, guid: d85a1210fb7022f4ba85eb0c8bed342e, type: 3}
+  doorSound: {fileID: 8300000, guid: 7839617971202bc40a9ccfe906f81137, type: 3}
+  perfectSound: {fileID: 8300000, guid: 11f79a0b07d26ca47b0adf9eb55904d5, type: 3}
   potionRequested: {fileID: 0}
 --- !u!1 &1641711065520065250
 GameObject:

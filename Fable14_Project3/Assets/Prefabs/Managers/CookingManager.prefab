@@ -540,6 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cookingSound: {fileID: 8300000, guid: 736c3c8ee40dd844c8ce4bc8514bbc46, type: 3}
+  perfectSound: {fileID: 8300000, guid: 11f79a0b07d26ca47b0adf9eb55904d5, type: 3}
   submitCode: 13
   startDelay: 0.4
   cookDuration: 1

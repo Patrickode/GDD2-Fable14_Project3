@@ -485,6 +485,7 @@ MonoBehaviour:
   poofSound: {fileID: 8300000, guid: c3ce7fe4272fb5344883ae2c79798b86, type: 3}
   stirringSound: {fileID: 8300000, guid: f3bdcaa383c98d64090e08429cc53f2a, type: 3}
   splashSound: {fileID: 8300000, guid: a7281ab9f2c22644896cfba72d8cd17c, type: 3}
+  ingredientUsedSound: {fileID: 8300000, guid: 01882e46fd0f71e41843245a926bb60f, type: 3}
   progressLabel: {fileID: 0}
   progressBarPivot: {fileID: 0}
   stirDuration: 4

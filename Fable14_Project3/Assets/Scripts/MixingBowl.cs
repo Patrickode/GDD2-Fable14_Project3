@@ -14,6 +14,7 @@ public class MixingBowl : MonoBehaviour
     [SerializeField] private AudioClip poofSound = null;
     [SerializeField] private AudioClip stirringSound = null;
     [SerializeField] private AudioClip splashSound = null;
+    [SerializeField] AudioClip ingredientUsedSound = null;
     private SoundEffectsManager soundEffectsManager;
 
     private HashSet<IngredientType> addedTypes;
@@ -77,11 +78,13 @@ public class MixingBowl : MonoBehaviour
     private void OnEnable()
     {
         IngredientAddedToBowl += PlayPoofSound;
+        IngredientSource.IngredientUsed += PlayIngredientUsedSound;
         ContentsDiscarded += PlayPoofSound;
     }
 
     private void OnDisable()
     {
+        IngredientSource.IngredientUsed -= PlayIngredientUsedSound;
         IngredientAddedToBowl = null;
         ContentsDiscarded = null;
     }
@@ -142,8 +145,8 @@ public class MixingBowl : MonoBehaviour
 
         if (stirAmount >= 1 && lastStirAmount < 1)
         {
-            InvokePoofAction();
             PlaySplashSound();
+            InvokePoofAction();
             MixingComplete?.Invoke(attributeAmounts);
         }
         lastStirAmount = stirAmount;
@@ -217,6 +220,16 @@ public class MixingBowl : MonoBehaviour
     private void PlaySplashSound(Dictionary<IngredientAttribute, int> mix)
     {
         PlaySplashSound();
+    }
+
+    private void PlayIngredientUsedSound()
+    {
+        soundEffectsManager.PlaySound(ingredientUsedSound);
+    }
+
+    private void PlayIngredientUsedSound(Ingredient ingredient)
+    {
+        PlayIngredientUsedSound();
     }
     #endregion
 

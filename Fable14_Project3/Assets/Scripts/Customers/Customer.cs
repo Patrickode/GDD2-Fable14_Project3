@@ -6,6 +6,10 @@ public class Customer : MonoBehaviour
     private SoundEffectsManager soundEffectsManager;
 
     [SerializeField] private AudioClip cashRegisterSound = null;
+    [SerializeField] private AudioClip coinsSound = null;
+    [SerializeField] private AudioClip failSound = null;
+    [SerializeField] private AudioClip doorSound = null;
+    [SerializeField] private AudioClip perfectSound = null;
 
     private ScoreManager scoreManager;
 
@@ -58,7 +62,9 @@ public class Customer : MonoBehaviour
         OnRequestComplete += IncreaseScore;
         OnRequestComplete += PlayCashRegisterSound;
         OnWrongPotionSubmitted += () => { PlayOutAnimation(); };
+        OnWrongPotionSubmitted += PlayCustomerDisatisfiedSounds;
         OnPatienceDepleted += PlayOutAnimation;
+        OnPatienceDepleted += PlayFailSound;
     }
 
     private void OnDisable()
@@ -79,7 +85,12 @@ public class Customer : MonoBehaviour
     public void SubmitPotion(Potion potion)
     {
         if (potion.PotionType == potionRequested)
+        {
+            if (potion.cookState == CookState.Perfect)
+                PlayPerfectSound();
             OnRequestComplete?.Invoke(potion);
+        }
+            
         else
         {
             DecreaseScore(potionRequested);
@@ -149,6 +160,23 @@ public class Customer : MonoBehaviour
     private void PlayCashRegisterSound(Potion potion)
     {
         PlayCashRegisterSound();
+    }
+
+    private void PlayCustomerDisatisfiedSounds()
+    {
+        soundEffectsManager.PlaySound(failSound);
+        soundEffectsManager.PlaySound(coinsSound);
+        soundEffectsManager.PlaySound(doorSound);
+    }
+
+    private void PlayFailSound()
+    {
+        soundEffectsManager.PlaySound(failSound);
+        soundEffectsManager.PlaySound(doorSound);
+    }
+    private void PlayPerfectSound()
+    {
+        soundEffectsManager.PlaySound(perfectSound);
     }
     #endregion
 }
