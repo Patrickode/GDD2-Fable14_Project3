@@ -299,6 +299,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -433,6 +456,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -552,6 +598,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -681,6 +750,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -810,6 +902,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -944,6 +1059,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -1073,6 +1211,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -1192,6 +1353,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -1321,6 +1505,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -1450,6 +1657,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -1569,6 +1799,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -1703,6 +1956,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -1832,6 +2108,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -1961,6 +2260,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -2080,6 +2402,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -2204,6 +2549,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -2323,6 +2691,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -2447,6 +2838,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -2581,6 +2995,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -2700,6 +3137,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -2829,6 +3289,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -2948,6 +3431,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -3077,6 +3583,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
@@ -3196,6 +3725,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient Source
       objectReference: {fileID: 0}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
+    - target: {fileID: 3647188202651718501, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4015536250173359475, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 3004294230800422524, guid: 22331f772867cdd49943dc5d97e40f19,
+        type: 2}
     - target: {fileID: 7832376627586471995, guid: 02e9fb97d1f3b3a4e865cd7d8c0fd2e1,
         type: 3}
       propertyPath: m_Color.r
