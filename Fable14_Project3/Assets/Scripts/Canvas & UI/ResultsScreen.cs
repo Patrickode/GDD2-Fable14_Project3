@@ -41,6 +41,7 @@ public class ResultsScreen : MonoBehaviour
             highScoreLabel.color = newHighScoreColor;
         }
 
+        gameObject.SetActive(true);
         StartCoroutine(DelayInAnim(inAnimDelay));
         CustomerManager.LastCustomerDequeued -= ShowResultsScreen;
     }
