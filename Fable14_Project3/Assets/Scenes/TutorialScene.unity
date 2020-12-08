@@ -1197,6 +1197,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6585810788687012456, guid: e6470f3d00d91074497c851b1c34e259,
+        type: 3}
+      propertyPath: customerSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585810788687012456, guid: e6470f3d00d91074497c851b1c34e259,
+        type: 3}
+      propertyPath: patienceRange.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585810788687012456, guid: e6470f3d00d91074497c851b1c34e259,
+        type: 3}
+      propertyPath: patienceRange.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585810788687012456, guid: e6470f3d00d91074497c851b1c34e259,
+        type: 3}
+      propertyPath: maxTimeBetweenCustomers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6585810788687012456, guid: e6470f3d00d91074497c851b1c34e259,
+        type: 3}
+      propertyPath: customerSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 688436272163457589, guid: 620cb7c139f5ab94eb7af2399caa3366,
+        type: 3}
+    - target: {fileID: 6585810788687012456, guid: e6470f3d00d91074497c851b1c34e259,
+        type: 3}
+      propertyPath: maxCustomerAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6585810788687012457, guid: e6470f3d00d91074497c851b1c34e259,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -48,20 +48,20 @@ MonoBehaviour:
   customerPrefab: {fileID: 5716412918244496673, guid: 4b81e32697fa6694ba9ec4a977e1754f,
     type: 3}
   customerSprites:
-  - {fileID: 21300000, guid: 1599656b49220f149b53a2e1f3b0c74b, type: 3}
-  - {fileID: 21300000, guid: 4a71e26e10b129b4db5b47e9783788ea, type: 3}
-  - {fileID: 21300000, guid: 9bcdb01d96a850940a8b860436dfa9e9, type: 3}
-  - {fileID: 21300000, guid: 7e1a05385132e994587fcc5901166128, type: 3}
-  - {fileID: 21300000, guid: 2427a7ef87ab116498aaeb4de9b43d55, type: 3}
-  - {fileID: 21300000, guid: bda6fbf2882ef574b87558e427e746bf, type: 3}
-  - {fileID: 21300000, guid: a719a8fdd17fed744933e876227a7660, type: 3}
-  - {fileID: 21300000, guid: 91215289a5a7e474ebcafce78068a5fa, type: 3}
-  - {fileID: 21300000, guid: 2ff677415292c6442927992fe1812053, type: 3}
-  - {fileID: 21300000, guid: 39e95282a3294f44bb6a8b0db633059f, type: 3}
-  - {fileID: 21300000, guid: 2397e206039c2304bacb3fbc968e2c2a, type: 3}
-  - {fileID: 21300000, guid: f523a41bbf8f71e478d0c23235e8c274, type: 3}
+  - {fileID: 6060616038233746016, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: -1203429690915806911, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: 7995199040070062869, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: 550538241116602208, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: 4806994355160878302, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: -7784881526568303934, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: 2768213858573194981, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: 5923631388901523331, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: 735107428028827793, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: 8656369308661616251, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: 688436272163457589, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
+  - {fileID: -4932316972425803753, guid: 620cb7c139f5ab94eb7af2399caa3366, type: 3}
   maxCustomerAmount: 3
   spaceBetweenCustomers: 3
-  patienceRange: {x: 20, y: 20}
+  patienceRange: {x: 25, y: 30}
   minTimeBetweenCustomers: 1
   maxTimeBetweenCustomers: 2
